@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍤 My Favorite Recipes 🍝</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .tile {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        /* Shrimp Linguini Section */
+        .shrimp {
+            background: #d26500;
+            border: 2px solid #d26500;
+        }
+        .shrimp h2 {
+            background-color: #fff;
+            border: 5px solid #de5d17;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 15px;
+            color: #d26500;
+        }
+
+        /* Chicken Alfredo Section */
+        .alfredo {
+            background: #0056b3;
+            border: 2px solid #004080;
+        }
+        .alfredo h2 {
+            background-color: #fff;
+            border: 5px solid #004080;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 15px;
+            color: #0056b3;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 22px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+            margin: 20px 0 10px;
+            color: #fff;
+        }
+
+        /* Make Button */
+        .make-button {
+            display: block;
+            margin: 20px auto;
+            background: #fff;
+            font-size: 18px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 200ms ease-in-out;
+            text-decoration: none;
+        }
+        .shrimp .make-button {
+            color: #d26500;
+        }
+        .alfredo .make-button {
+            color: #0056b3;
+        }
+        .make-button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Shrimp Linguini Section -->
+    <div class="tile shrimp">
+        <h1>I ❤️ Shrimp Linguini</h1>
+        <h2>Especially when it's made with <em>Lemon</em> 🍋 and <em>Garlic</em> 🧄</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Shrimp_Linguini.png?v=1741665557" alt="Shrimp Linguini">
+        <p>
+            Shrimp linguini is a classic pasta dish that pairs juicy shrimp with linguini in a flavorful sauce.
+            It's a great dish for a special occasion or a romantic dinner. Quick, easy, and customizable!
+        </p>
+        <a href="https://tasty.co/recipe/one-pot-lemon-garlic-shrimp-pasta" target="_blank">
+            <button class="make-button">👉 Make Shrimp Linguini</button>
+        </a>
+    </div>
+
+    <!-- Chicken Alfredo Section -->
+    <div class="tile alfredo">
+        <h1>I ❤️ Chicken Alfredo</h1>
+        <h2>Rich and Creamy with <em>Parmesan</em> 🧀 and <em>Garlic</em> 🧄</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Chicken_Alfredo.png?v=1741665557" alt="Chicken Alfredo">
+        <p>
+            Chicken Alfredo is a creamy and indulgent dish made with tender chicken, fettuccine pasta, 
+            and a rich Parmesan cheese sauce. Perfect for a comforting meal!
+        </p>
+        <a href="https://tasty.co/recipe/one-pot-creamy-chicken-alfredo" target="_blank">
+            <button class="make-button">👉 Make Chicken Alfredo</button>
+        </a>
+    </div>
+
+    <p class="footer">This page was built by Nadine Herrera</p>
+
+</body>
+</html>
