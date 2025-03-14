@@ -48,7 +48,7 @@
             box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
         }
 
-        .portfolio-button, .resume-button, .recipe-button {
+        .portfolio-button, .resume-button, .recipe-button, .alchemy-button {
             display: inline-block;
             background-color: #c0a368; /* Gold */
             color: #121212; /* Dark contrast */
@@ -62,9 +62,21 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .portfolio-button:hover, .resume-button:hover, .recipe-button:hover {
+        .portfolio-button:hover, .resume-button:hover, .recipe-button:hover, .alchemy-button:hover {
             background-color: #a98f5e; /* Darker gold */
             transform: scale(1.05);
+        }
+
+        /* Alchemy Body Werks logo styling */
+        .alchemy-logo {
+            max-width: 180px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .alchemy-logo:hover {
+            transform: scale(1.1);
         }
 
     </style>
@@ -86,7 +98,7 @@
         <h2>📚 My Education</h2>
         <p>Explore my academic background and certifications.</p>
         <a href="https://nadineherrera.github.io/my-portfolio/education" class="portfolio-button">
-            View Education
+            🎓 View Education
         </a>
     </div>
 
@@ -94,8 +106,20 @@
         <h2>📄 My Professional Resume</h2>
         <p>View my professional experience and skills.</p>
         <a href="https://nadineherrera.github.io/my-portfolio/resume" class="resume-button">
-            View Resume
+            📄 View Resume
         </a>
     </div>
+
+    <!-- New Card for Alchemy Body Werks -->
+    <div class="card">
+        <h2>🌿 Alchemy Body Werks</h2>
+        <p>Conscious Luxe: Plant-Powered Self-Care Magic</p>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/logo.png?v=1731430965" 
+             alt="Alchemy Body Werks Logo" class="alchemy-logo">
+        <a href="https://alchemybodywerks.com" class="alchemy-button" target="_blank">
+            Visit Alchemy Body Werks
+        </a>
+    </div>
+
 </body>
 </html>
