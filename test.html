@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Recipe Cards Project</title>
     <style>
       body {
         background-color: #000a00;
@@ -13,32 +13,34 @@
         margin: 0;
         padding: 50px;
       }
-      
-      .profile-container {
+
+      .recipe-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background: rgba(255, 255, 255, 0.1);
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 12px;
         box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-        max-width: 250px;
+        max-width: 700px;
         margin: 0 auto 30px;
+        text-align: left;
       }
 
-      .profile-container img {
-        width: 130px; /* More natural resume-size */
-        height: 180px; /* Taller than wide for a more professional look */
-        border-radius: 12px; /* Slightly rounded corners, not fully circular */
-        border: 3px solid #ffffff;
-        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-        object-fit: cover; /* Ensures proper scaling */
+      .recipe-container h2 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 10px;
       }
 
-      .recipe-button,
-      .portfolio-button,
-      .resume-button {
+      .recipe-container p {
+        color: #cccccc;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .back-button {
         display: inline-block;
         background-color: #ffffff;
         color: #000000;
@@ -48,40 +50,38 @@
         border-radius: 8px;
         border: 2px solid #ffffff;
         transition: background-color 0.3s ease, color 0.3s ease;
-        margin: 10px;
+        margin-top: 20px;
       }
 
-      .recipe-button:hover,
-      .portfolio-button:hover,
-      .resume-button:hover {
+      .back-button:hover {
         background-color: #f7f7f7;
         color: #000000;
       }
     </style>
   </head>
   <body>
-    <h1>Welcome to My Portfolio</h1>
+    <h1>🍽️ Recipe Cards Project</h1>
 
-    <div class="profile-container">
-      <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
-        alt="Profile Picture" />
+    <!-- New Project Overview Section -->
+    <div class="recipe-container">
+      <h2>🛠 Project Overview</h2>
+      <p>
+        This project showcases **interactive recipe cards** that I designed using **HTML, CSS, and JavaScript**. 
+        The goal was to create a user-friendly and visually appealing interface where users can explore 
+        different recipes with **smooth animations and responsive layouts**.
+      </p>
+      <p>
+        I used **HTML** to structure the recipe cards, **CSS** for styling and layout design, and **JavaScript** 
+        to add interactive elements such as dynamic content loading, hover effects, and toggling recipe details. 
+        Each card is designed to be **responsive**, ensuring a great user experience across different screen sizes.
+      </p>
+      <p>
+        This project demonstrates my ability to build functional, interactive, and well-styled front-end web applications. 
+      </p>
     </div>
 
-    <p>Explore my latest front-end web development projects.</p>
-    <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="recipe-button">
-      View Projects
-    </a>
-    
-    <h2>📚 My Education</h2>
-    <p>Explore my academic background and certifications.</p>
-    <a href="https://nadineherrera.github.io/my-portfolio/education" class="portfolio-button">
-      View Education
-    </a>
-    
-    <h2>📄 My Professional Resume</h2>
-    <p>View my professional experience and skills.</p>
-    <a href="https://nadineherrera.github.io/my-portfolio/resume" class="resume-button">
-      View Professional Resume
+    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+      🔙 Back to Portfolio
     </a>
   </body>
 </html>
