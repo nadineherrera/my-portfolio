@@ -1,125 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+      body {
+        background-color: #000a00;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 50px;
+      }
+      
+      .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        max-width: 400px;
+        margin: 0 auto 30px;
+      }
 
-        body {
-            background-color: #121212; /* Sleek black */
-            color: #f5f5f5; /* Soft white */
-            font-family: 'Playfair Display', serif; /* Elegant font */
-            text-align: center;
-            margin: 0;
-            padding: 50px;
-        }
+      .profile-container img {
+        max-width: 100%;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+      }
 
-        h1, h2 {
-            color: #c0a368; /* Gold headings */
-        }
+      .recipe-button,
+      .portfolio-button,
+      .resume-button {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 18px;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        border: 2px solid #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 10px;
+      }
 
-        img {
-            display: block;
-            margin: 20px auto;
-            max-width: 150px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-
-        .card {
-            background: #1a1a1a;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 400px;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-
-        .portfolio-button, .resume-button, .recipe-button, .alchemy-button {
-            display: inline-block;
-            background-color: #c0a368; /* Gold */
-            color: #121212; /* Dark contrast */
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            border: none;
-            transition: all 0.3s ease-in-out;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .portfolio-button:hover, .resume-button:hover, .recipe-button:hover, .alchemy-button:hover {
-            background-color: #a98f5e; /* Darker gold */
-            transform: scale(1.05);
-        }
-
-        /* Alchemy Body Werks logo styling */
-        .alchemy-logo {
-            max-width: 180px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .alchemy-logo:hover {
-            transform: scale(1.1);
-        }
-
+      .recipe-button:hover,
+      .portfolio-button:hover,
+      .resume-button:hover {
+        background-color: #f7f7f7;
+        color: #000000;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to My Portfolio</h1>
-    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" alt="Profile Picture">
-    <p>Hi, I'm Nadine! Check out my projects below.</p>
 
-    <div class="card">
-        <h2>👩🏽‍💻 Front End Web Development</h2>
-        <p>Explore my latest front-end web development projects.</p>
-        <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="recipe-button">
-            View Projects
-        </a>
+    <div class="profile-container">
+      <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" alt="Profile Picture"/>
     </div>
 
-    <div class="card">
-        <h2>📚 My Education</h2>
-        <p>Explore my academic background and certifications.</p>
-        <a href="https://nadineherrera.github.io/my-portfolio/education" class="portfolio-button">
-            View Education
-        </a>
-    </div>
-
-    <div class="card">
-        <h2>📄 My Professional Resume</h2>
-        <p>View my professional experience and skills.</p>
-        <a href="https://nadineherrera.github.io/my-portfolio/resume" class="resume-button">
-            View Resume
-        </a>
-    </div>
-
-    <!-- New Card for Alchemy Body Werks -->
-    <div class="card">
-        <h2>🌿 Alchemy Body Werks</h2>
-        <p>Conscious Luxe: Plant-Powered Self-Care Magic</p>
-        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/logo.png?v=1731430965" 
-             alt="Alchemy Body Werks Logo" class="alchemy-logo">
-        <a href="https://alchemybodywerks.com" class="alchemy-button" target="_blank">
-            Visit Alchemy Body Werks
-        </a>
-    </div>
-
-</body>
+    <p>Explore my latest front-end web development projects.</p>
+    <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="recipe-button">
+      View Projects
+    </a>
+    
+    <h2>📚 My Education</h2>
+    <p>Explore my academic background and certifications.</p>
+    <a href="https://nadineherrera.github.io/my-portfolio/education" class="portfolio-button">
+      View Education
+    </a>
+    
+    <h2>📄 My Professional Resume</h2>
+    <p>View my professional experience and skills.</p>
+    <a href="https://nadineherrera.github.io/my-portfolio/resume" class="resume-button">
+      View Professional Resume
+    </a>
+  </body>
 </html>
