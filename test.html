@@ -1,65 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Cards Project</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍽️ View My Favorite Recipes</title>
     <style>
-      body {
-        background-color: #000a00;
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 50px;
-      }
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .tile {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
 
-      .recipe-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-        max-width: 700px;
-        margin: 0 auto 30px;
-        text-align: left;
-      }
+        .shrimp {
+            background: #d26500;
+            border: 2px solid #d26500;
+        }
+        .shrimp h2 {
+            background-color: #fff;
+            border: 5px solid #de5d17;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 15px;
+            color: #d26500;
+        }
 
-      .recipe-container h2 {
-        color: #ffffff;
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
+        .roast {
+            background: #0056b3;
+            border: 2px solid #004080;
+        }
+        .roast h2 {
+            background-color: #fff;
+            border: 5px solid #004080;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 15px;
+            color: #0056b3;
+        }
 
-      .recipe-container p {
-        color: #cccccc;
-        font-size: 16px;
-        line-height: 1.6;
-      }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 22px;
+        }
 
-      .back-button {
-        display: inline-block;
-        background-color: #ffffff;
-        color: #000000;
-        font-size: 18px;
-        padding: 12px 20px;
-        text-decoration: none;
-        border-radius: 8px;
-        border: 2px solid #ffffff;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        margin-top: 20px;
-      }
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+            margin: 20px 0 10px;
+            color: #fff;
+        }
 
-      .back-button:hover {
-        background-color: #f7f7f7;
-        color: #000000;
-      }
+        a {
+            text-decoration: none; 
+        }
+        .make-button {
+            display: block;
+            margin: 20px auto;
+            background: #fff;
+            font-size: 18px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 200ms ease-in-out;
+            text-decoration: none;
+           
+        }
+        .shrimp .make-button {
+            color: #d26500;
+        }
+        .roast .make-button {
+            color: #0056b3;
+        }
+        .make-button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h1>🍽️ Recipe Cards Project</h1>
 
     <!-- New Project Overview Section -->
@@ -80,8 +113,35 @@
       </p>
     </div>
 
-    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+   
+    <div class="tile shrimp">
+        <h1>I ❤️ Shrimp Linguini</h1>
+        <h2>Especially when it's made with <em>Lemon</em> 🍋 and <em>Garlic</em> 🧄</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Shrimp_Linguini.png?v=1741665557" alt="Shrimp Linguini">
+        <p>
+            Shrimp linguini is a classic pasta dish that pairs juicy shrimp with linguini in a flavorful sauce.
+            It's a great dish for a special occasion or a romantic dinner. Quick, easy, and customizable!
+        </p>
+        <a href="https://tasty.co/recipe/one-pot-lemon-garlic-shrimp-pasta" target="_blank">
+            <button class="make-button">👉 Make Shrimp Linguini</button>
+        </a>
+    </div>
+
+    <div class="tile roast">
+        <h1>I ❤️ Mississippi Pot Roast</h1>
+        <h2>Made with <em>Chuck Roast</em> 🥩 and <em>Pepperocini Peppers</em> 🌶️</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/MS_Pot_Roast.png?v=1741671728" alt="Mississippi Pot Roast">
+        <p>
+            Mississippi Pot Roast is a hearty and tangy dish made with five simple ingredients. Serve it alongside mashed potatoes for a cozy and satisfying meal.
+        </p>
+        <a href="https://belleofthekitchen.com/mississippi-pot-roast/" target="_blank">
+            <button class="make-button">👉 Make Mississippi Pot Roast</button>
+        </a>
+    </div>
+
+     <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
       🔙 Back to Portfolio
     </a>
-  </body>
+
+</body>
 </html>
