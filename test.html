@@ -3,63 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 👩🏽‍🎓 My Degrees & Certificates</title>
-</head>
-     <style>
-   body {
-        background-color: #000a00;
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 50px;
-      }
-     .degree-section, .certificate-section {
-            margin-bottom: 40px;
+    <title>My Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+        body {
+            background-color: #121212; /* Sleek black */
+            color: #f5f5f5; /* Soft white */
+            font-family: 'Playfair Display', serif; /* Elegant font */
+            text-align: center;
+            margin: 0;
+            padding: 50px;
         }
 
-        .degree, .certificate {
-            margin-bottom: 30px;
+        h1, h2 {
+            color: #c0a368; /* Gold headings */
         }
-         
+
         img {
-        display: block;
-        margin: 0 auto;
-        width: 550px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 14px;
-      }
-         </style>
-    <header>
-        <h1>My Academic Achievements</h1>
-        <p>Showcasing my educational background and certifications.</p>
-    </header>
-    <main>
-        <section class="degree-section">
-            <h1>Degrees</h1>
-            <div class="degree">
-                <h3>Bachelor of Science in Marketing</h3>
-                <p>Colorado State University System, 2024</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008" alt="Bachelor's Degree">
-            </div>
-            <div class="degree">
-                <h3>Associate of Arts</h3>
-                <p>Community College of Aurora, 2005</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125" alt="Associate's Degree">
-            </div>
-        </section>
-        <section class="certificate-section">
-            <h1>Certificates</h1>
-            <div class="certificate">
-                <h3>CompTIA A+ Certified Professional IT Technician</h3>
-                <p>Issued by The Computing Technology Industry Association (CompTIA), 2008</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129" alt="CompTIA A+ Certification">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nadine. All Rights Reserved.</p>
-    </footer>
+            display: block;
+            margin: 20px auto;
+            max-width: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .portfolio-button, .resume-button, .recipe-button {
+            display: inline-block;
+            background-color: #c0a368; /* Gold */
+            color: #121212; /* Dark contrast */
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease-in-out;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .portfolio-button:hover, .resume-button:hover, .recipe-button:hover {
+            background-color: #a98f5e; /* Darker gold */
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" alt="Profile Picture">
+    <p>Hi, I'm Nadine! Check out my projects below.</p>
+
+    <div class="card">
+        <h2>👩🏽‍💻 Front End Web Development</h2>
+        <p>Explore my latest front-end web development projects.</p>
+        <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="recipe-button">
+            View Projects
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>📚 My Education</h2>
+        <p>Explore my academic background and certifications.</p>
+        <a href="https://nadineherrera.github.io/my-portfolio/education" class="portfolio-button">
+            🎓 View Education
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>📄 My Professional Resume</h2>
+        <p>View my professional experience and skills.</p>
+        <a href="https://nadineherrera.github.io/my-portfolio/resume" class="resume-button">
+            📄 View Resume
+        </a>
+    </div>
 </body>
 </html>
