@@ -6,10 +6,10 @@
     <title>My Portfolio</title>
     <style>
       body {
-        background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
+    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
@@ -17,47 +17,6 @@
         padding: 50px;
       }
 
-      /* Navigation Bar Styling */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8); 
-        padding: 10px 0;
-        z-index: 1000;
-      }
-
-      .navbar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      .navbar ul li {
-        margin: 0 15px;
-      }
-
-      .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px 15px;
-        transition: 0.3s;
-      }
-
-      .navbar ul li a:hover {
-        background: white;
-        color: black;
-        border-radius: 5px;
-      }
-
-      /* Adjust page padding to avoid overlap with fixed navbar */
-      .content {
-        padding-top: 60px;
-      }
 
       .profile-photo {
         width: 130px; 
@@ -68,7 +27,10 @@
         object-fit: cover; 
       }
 
-      .button {
+      .recipe-button,
+      .portfolio-button,
+      .resume-button,
+      .brand-button {
         display: inline-block;
         background-color: #ffffff;
         color: #000000;
@@ -81,83 +43,133 @@
         margin: 10px;
       }
 
-      .button:hover {
+      .recipe-button:hover,
+      .portfolio-button:hover,
+      .resume-button:hover,
+      .brand-button:hover {
         background-color: #f7f7f7;
         color: #000000;
       }
-
-      h4, h5, p {
+       h4 {
         text-align: center;
-        max-width: 90%;
-        margin: 0 auto;
-        word-wrap: break-word;
+        max-width: 90%; 
+        margin: 0 auto; 
+        word-wrap: break-word; 
       }
+        h5 {
+        text-align: center;
+        max-width: 100%; 
+   
+      }
+       p {
+        text-align: center;
+        max-width: 98%; 
+        margin: 0 auto; 
+        word-wrap: break-word; 
+      }
+      .text-box {
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
     </style>
   </head>
   <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#brand">My Brand</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="content">
-      <h1>Hi 👋🏽 my name is Nadine.</h1>
-      <h1>Welcome to My Portfolio!</h1>
+    <h1>Hi 👋🏽 my name is Nadine.</h1>
+    <h1>Welcome to My Portfolio!</h1>
+  <br>
+    <img 
+      src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
+      alt="Profile Picture" 
+      class="profile-photo"
+    />
+    <br>
+    <br>
+    <h4>Carpe Facto Advisor at Apple | Product Insights & Technical Specialist | AI & Cloud Computing Enthusiast | Customer-Centric Innovator | Entrepreneur & Brand Builder</h4>
+    <br>
+  <p class="text-box">
+  As a Carpe Facto Advisor at Apple, I specialize in analyzing product performance, identifying trends, and providing technical insights that contribute to engineering, hardware, and software improvements. 
+  My role allows me to bridge the gap between customer experiences and product development, ensuring that insights from real-world usage drive innovation and refinement.
+With a strong foundation in technical troubleshooting and problem-solving, I have developed the ability to investigate complex product behaviors, assess performance trends, and communicate valuable findings to cross-functional teams.
+  </p> 
+  <br>
+   <p class="text-box">
+  My expertise aligns with software engineers, hardware specialists, and marketing teams, helping to improve both product functionality and user experience.
+Beyond my work in tech, I am the founder of Alchemy Body Werks, a plant-based personal care brand focused on self-care, wellness, and sustainability.
+I believe in creating immersive brand experiences that foster transformation and well-being.
+I am also expanding my knowledge in AI and cloud computing, exploring how these technologies can enhance customer engagement, automate processes, and optimize business operations.</p>
+<br>
+ <p class="text-box">
+   I am eager to collaborate with industry professionals, engineers, and business leaders to drive meaningful innovation and growth.
+ </p>
+    <br>
+<h2>🚀 Current Projects: Bridging Tech, Career Growth & Wellness</h2>
+    <br>
+<h2>👩🏽‍💻 Building Engaging Digital Experiences</h2>
+ <p class="text-box">
+   I am currently honing my skills in front-end development, focusing on creating user-friendly, visually appealing, and responsive web applications.
+ </p>
+    <br>
+     <p class="text-box">
+       My goal is to build interfaces that blend functionality and aesthetics, leveraging modern frameworks and best practices.
+     </p> 
+     <p class="text-box">
+       Explore my latest front-end web development projects.
+     </p>
+    <br>
+    <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="recipe-button">
+      View Projects
+    </a>
+    <br>
+    <br>
+    <h2>📚 My Education & Certifications</h2>
+     <p class="text-box">
+       Explore my academic journey, professional certifications, and continuous learning efforts in technology, business, and innovation.
+     </p>
+     <br>
+    <a href="https://nadineherrera.github.io/my-portfolio/education" class="portfolio-button">
+      View Education
+    </a>
+    <br>
       <br>
-      <img 
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
-        alt="Profile Picture" 
-        class="profile-photo"
-      />
-      <br><br>
-      
-      <!-- About Section -->
-      <h2 id="about">About Me</h2>
-      <h4>Carpe Facto Advisor at Apple | Product Insights & Technical Specialist | AI & Cloud Computing Enthusiast | Entrepreneur & Brand Builder</h4>
-      <p>As a Carpe Facto Advisor at Apple, I specialize in analyzing product performance, identifying trends, and providing technical insights...</p>
+    <h2>📄  My Professional Resume</h2>
+     <p class="text-box">
+       Explore my professional experience, technical expertise, and career journey in technology, customer engagement, and entrepreneurship.
+     </p>
+     <br>
+    <a href="https://nadineherrera.github.io/my-portfolio/resume" class="resume-button">
+      View Professional Resume
+    </a>
+<br>
       <br>
-
-      <!-- Projects Section -->
-      <h2 id="projects">🚀 Current Projects</h2>
-      <p>I am currently honing my skills in front-end development, focusing on creating user-friendly, visually appealing, and responsive web applications.</p>
-      <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="button">View Projects</a>
-      <br><br>
-
-      <!-- Education Section -->
-      <h2 id="education">📚 My Education & Certifications</h2>
-      <p>Explore my academic journey, professional certifications, and continuous learning efforts in technology.</p>
-      <a href="https://nadineherrera.github.io/my-portfolio/education" class="button">View Education</a>
-      <br><br>
-
-      <!-- Resume Section -->
-      <h2 id="resume">📄 My Professional Resume</h2>
-      <p>Explore my professional experience, technical expertise, and career journey.</p>
-      <a href="https://nadineherrera.github.io/my-portfolio/resume" class="button">View Resume</a>
-      <br><br>
-
-      <!-- Brand Section -->
-      <h2 id="brand">💆🏽‍♀️ My Skincare & Wellness Products</h2>
-      <p>Explore a thoughtfully crafted collection of self-care essentials.</p>
-      <a href="https://alchemybodywerks.com" class="button" target="_blank" rel="noopener noreferrer">Visit My Brand</a>
-      <br><br>
-
-      <!-- Contact Section -->
-      <h2 id="contact">📩 Let's Connect!</h2>
-      <p>💡 Let’s explore opportunities to learn, build, and innovate together!</p>
+    <h2 style="text-align: center;">
+  <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Correct_Logo_Color.heic?v=1741938324" alt="Alchemy Logo" width="38" height="38" 
+    style="vertical-align: middle; margin-right: 0px;">
+    View My Skincare & Wellness Products
+</h2>
+    
+     <p class="text-box">
+       Explore a thoughtfully crafted collection of self-care essentials designed to uplift your mind, body, and spirit.
+     </p>
+    <br>
+     <a href="https://alchemybodywerks.com" class="brand-button" target="_blank" rel="noopener noreferrer">
+      Visit My Brand Website
+    </a>
+    <br>
       <br>
-    </div>
-
+    <br>
+     <p class="text-box">
+       💡Let’s connect and explore opportunities to learn, build, and innovate together!
+     </p>
+      <br>
+      <br>
+          </section>
+    </main>
     <footer>
-      <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
     </footer>
-
   </body>
 </html>
