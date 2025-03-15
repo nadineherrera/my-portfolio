@@ -1,101 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍽️ View My Favorite Recipes</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
     <style>
-        body {
-            font-family: "Arial", sans-serif;
-            background: #000a00;
-            color: #fff;
-            margin: 0;
-            padding: 0px;
-            text-align: center;
-        }
-        .tile {
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: #fff;
-        }
+      body {
+        background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 50px;
+      }
 
-        .shrimp {
-            background: #d26500;
-            border: 2px solid #d26500;
-        }
-        .shrimp h2 {
-            background-color: #fff;
-            border: 5px solid #de5d17;
-            padding: 15px;
-            font-size: 18px;
-            border-radius: 15px;
-            color: #d26500;
-        }
+      /* Navigation Bar Styling */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8); 
+        padding: 10px 0;
+        z-index: 1000;
+      }
 
-        .roast {
-            background: #0056b3;
-            border: 2px solid #004080;
-        }
-        .roast h2 {
-            background-color: #fff;
-            border: 5px solid #004080;
-            padding: 15px;
-            font-size: 18px;
-            border-radius: 15px;
-            color: #0056b3;
-        }
-        .project-description {
-  max-width: 600px; /* Restricts width for better readability */
-  margin: 0 auto; /* Centers the text */
-  text-align: center; /* Ensures text is centered */
-  line-height: 1.6; /* Improves readability */
-  color: #cccccc; /* Soft contrast for readability */
-}
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            border-radius: 22px;
-        }
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
 
-        p {
-            line-height: 1.5;
-            font-size: 16px;
-            margin: 20px 0 10px;
-            color: #fff;
-        }
+      .navbar ul li {
+        margin: 0 15px;
+      }
 
-        a {
-            text-decoration: none; 
-        }
-        .make-button {
-            display: block;
-            margin: 20px auto;
-            background: #fff;
-            font-size: 18px;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            transition: all 200ms ease-in-out;
-            text-decoration: none;
-           
-        }
-        .shrimp .make-button {
-            color: #d26500;
-        }
-        .roast .make-button {
-            color: #0056b3;
-        }
-        .make-button:hover {
-            opacity: 0.9;
-            cursor: pointer;
-        }
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: 0.3s;
+      }
 
-        .back-button {
+      .navbar ul li a:hover {
+        background: white;
+        color: black;
+        border-radius: 5px;
+      }
+
+      /* Adjust page padding to avoid overlap with fixed navbar */
+      .content {
+        padding-top: 60px;
+      }
+
+      .profile-photo {
+        width: 130px; 
+        height: 130px; 
+        border-radius: 50%; 
+        border: 3px solid #ffffff; 
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); 
+        object-fit: cover; 
+      }
+
+      .button {
         display: inline-block;
         background-color: #ffffff;
         color: #000000;
@@ -105,67 +78,86 @@
         border-radius: 8px;
         border: 2px solid #ffffff;
         transition: background-color 0.3s ease, color 0.3s ease;
-        margin-top: 20px;
+        margin: 10px;
       }
 
-      .back-button:hover {
+      .button:hover {
         background-color: #f7f7f7;
         color: #000000;
       }
+
+      h4, h5, p {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+        word-wrap: break-word;
+      }
     </style>
-</head>
-<body>
-    <h1>🍽️ Recipe Cards Project</h1>
+  </head>
+  <body>
 
-    <!-- New Project Overview Section -->
-<div class="project-description">
-  <p>
-    This project showcases interactive recipe cards that I designed using 
-    <strong>HTML, CSS, and JavaScript</strong>. The goal was to create a user-friendly 
-    and visually appealing interface where users can explore different recipes with 
-    <strong>smooth animations and responsive layouts</strong>.
-  </p>
-  <p>
-    I used <strong>HTML</strong> to structure the recipe cards, <strong>CSS</strong> for styling 
-    and layout design, and <strong>JavaScript</strong> to add interactive elements such as 
-    dynamic content loading, hover effects, and toggling recipe details. Each card is 
-    designed to be <strong>responsive</strong>, ensuring a great user experience across 
-    different screen sizes.
-  </p>
-  <p>
-    This project demonstrates my ability to build functional, interactive, and well-styled 
-    front-end web applications.
-  </p>
-</div>
-   
-    <div class="tile shrimp">
-        <h1>I ❤️ Shrimp Linguini</h1>
-        <h2>Especially when it's made with <em>Lemon</em> 🍋 and <em>Garlic</em> 🧄</h2>
-        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Shrimp_Linguini.png?v=1741665557" alt="Shrimp Linguini">
-        <p>
-            Shrimp linguini is a classic pasta dish that pairs juicy shrimp with linguini in a flavorful sauce.
-            It's a great dish for a special occasion or a romantic dinner. Quick, easy, and customizable!
-        </p>
-        <a href="https://tasty.co/recipe/one-pot-lemon-garlic-shrimp-pasta" target="_blank">
-            <button class="make-button">👉 Make Shrimp Linguini</button>
-        </a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#brand">My Brand</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <h1>Hi 👋🏽 my name is Nadine.</h1>
+      <h1>Welcome to My Portfolio!</h1>
+      <br>
+      <img 
+        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
+        alt="Profile Picture" 
+        class="profile-photo"
+      />
+      <br><br>
+      
+      <!-- About Section -->
+      <h2 id="about">About Me</h2>
+      <h4>Carpe Facto Advisor at Apple | Product Insights & Technical Specialist | AI & Cloud Computing Enthusiast | Entrepreneur & Brand Builder</h4>
+      <p>As a Carpe Facto Advisor at Apple, I specialize in analyzing product performance, identifying trends, and providing technical insights...</p>
+      <br>
+
+      <!-- Projects Section -->
+      <h2 id="projects">🚀 Current Projects</h2>
+      <p>I am currently honing my skills in front-end development, focusing on creating user-friendly, visually appealing, and responsive web applications.</p>
+      <a href="https://nadineherrera.github.io/my-portfolio/recipes" class="button">View Projects</a>
+      <br><br>
+
+      <!-- Education Section -->
+      <h2 id="education">📚 My Education & Certifications</h2>
+      <p>Explore my academic journey, professional certifications, and continuous learning efforts in technology.</p>
+      <a href="https://nadineherrera.github.io/my-portfolio/education" class="button">View Education</a>
+      <br><br>
+
+      <!-- Resume Section -->
+      <h2 id="resume">📄 My Professional Resume</h2>
+      <p>Explore my professional experience, technical expertise, and career journey.</p>
+      <a href="https://nadineherrera.github.io/my-portfolio/resume" class="button">View Resume</a>
+      <br><br>
+
+      <!-- Brand Section -->
+      <h2 id="brand">💆🏽‍♀️ My Skincare & Wellness Products</h2>
+      <p>Explore a thoughtfully crafted collection of self-care essentials.</p>
+      <a href="https://alchemybodywerks.com" class="button" target="_blank" rel="noopener noreferrer">Visit My Brand</a>
+      <br><br>
+
+      <!-- Contact Section -->
+      <h2 id="contact">📩 Let's Connect!</h2>
+      <p>💡 Let’s explore opportunities to learn, build, and innovate together!</p>
+      <br>
     </div>
 
-    <div class="tile roast">
-        <h1>I ❤️ Mississippi Pot Roast</h1>
-        <h2>Made with <em>Chuck Roast</em> 🥩 and <em>Pepperocini Peppers</em> 🌶️</h2>
-        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/MS_Pot_Roast.png?v=1741671728" alt="Mississippi Pot Roast">
-        <p>
-            Mississippi Pot Roast is a hearty and tangy dish made with five simple ingredients. Serve it alongside mashed potatoes for a cozy and satisfying meal.
-        </p>
-        <a href="https://belleofthekitchen.com/mississippi-pot-roast/" target="_blank">
-            <button class="make-button">👉 Make Mississippi Pot Roast</button>
-        </a>
-    </div>
+    <footer>
+      <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+    </footer>
 
-     <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-      🔙 Back to Portfolio
-    </a>
-
-</body>
+  </body>
 </html>
