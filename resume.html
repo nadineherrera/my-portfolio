@@ -3,51 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 📄 My Professional Resume</title>
-</head>
-     <style>
-    body {
-        background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        max-width: 95%;
-        margin: 0;
-      } 
-    p {
-        text-align: left;
-        max-width: 90%; 
-        margin: 0 auto; 
-        word-wrap: break-word;
-      }
-    .container {
+    <title>📄 My Professional Resume</title>
+    <style>
+        body {
+            background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            text-align: left;
         }
-     .resume-section, .certificate-section {
+
+        header {
+            text-align: center;
             margin-bottom: 40px;
         }
 
-        .resume, .certificate {
-            margin-bottom: 30px;
+        h1 {
+            font-size: 28px;
         }
-         
-        img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-        border-radius: 14px;
-      }
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
 
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .resume {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .resume img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 768px) {
             .container {
                 max-width: 100%;
                 padding: 10px;
@@ -56,47 +60,55 @@
             img {
                 width: 95%;
                 height: auto;
-               
             }
         }
-          .back-button {
-        display: inline-block;
-        background-color: #ffffff;
-        color: #000000;
-        font-size: 18px;
-        padding: 12px 20px;
-        text-decoration: none;
-        border-radius: 8px;
-        border: 2px solid #ffffff;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        max-width: 90%;
-        padding: 0%
-      }
 
-      .back-button:hover {
-        background-color: #f7f7f7;
-        color: #000000;
-      }
-         </style>
-    <header>
-        <h1>👩🏻‍💻 My Professional Resume</h1>
-        <p>Showcasing my leadership, strategy, and business skills.</p>
-        <br>
-    </header>
-    <main>
-        <section class="resume">
-            <div class="resume">
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 18px;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #f7f7f7;
+            color: #000000;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👩🏻‍💻 My Professional Resume</h1>
+            <p>Showcasing my leadership, strategy, and business skills.</p>
+        </header>
+
+        <main>
+            <section class="resume">
                 <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume_Page_1.png?v=1741845040" alt="Professional Resume">
-            </div>
+            </section>
+
             <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-      🔙 Back to Portfolio
-    </a>
-            <br>
-            <br>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
+                🔙 Back to Portfolio
+            </a>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
