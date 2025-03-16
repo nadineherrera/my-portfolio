@@ -3,40 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 👩🏽‍🎓 My Degrees & Certificates</title>
-</head>
-     <style>
-   body {
-           background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742009638'); 
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat; 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: left;
-        margin: 90;
-        padding: 50px;
-      }
-    .container {
-            max-width: 800px;
-            margin: 0 auto;
+    <title>🎓 My Education & Certifications</title>
+    <style>
+        body {
+            background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
             padding: 20px;
         }
-     .degree-section, .certificate-section {
+
+        .container {
+            width: 100%;
+            max-width: 800px; /* Matches resume page */
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h1, p {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .education-section {
             margin-bottom: 40px;
         }
 
-        .degree, .certificate {
-            margin-bottom: 30px;
+        /* Image Alignment */
+        .education img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+            margin-bottom: 20px;
         }
-         
-        img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-        border-radius: 14px;
-      }
+
+        /* Back Button Alignment */
+        .back-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 18px;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 20px;
+            width: fit-content;
+        }
+
+        .back-button:hover {
+            background-color: #f7f7f7;
+            color: #000000;
+        }
+
+        /* Footer Alignment */
+        footer {
+            text-align: left;
+            margin-top: 40px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        /* Mobile Optimization */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -47,68 +81,63 @@
                 padding: 10px;
             }
 
-            img {
-                width: 100%;
-                height: auto;
+            h1, p {
+                text-align: left;
+                max-width: 100%;
+            }
+
+            .education img {
+                max-width: 100%;
+            }
+
+            .back-button {
+                width: fit-content;
             }
         }
-          .back-button {
-        display: inline-block;
-        background-color: #ffffff;
-        color: #000000;
-        font-size: 18px;
-        padding: 12px 20px;
-        text-decoration: none;
-        border-radius: 8px;
-        border: 2px solid #ffffff;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        margin-top: 20px;
-      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 My Education & Certifications</h1>
+            <p>Showcasing my academic achievements and certifications.</p>
+        </header>
 
-      .back-button:hover {
-        background-color: #f7f7f7;
-        color: #000000;
-      }
-         </style>
-    <header>
-        <h1>📚 My Education & Certifications</h1>
-        <p>Here's a look at my education, certifications, and the skills I’m continuously building in technology, business, and innovation.</p>
-    </header>
-    <main>
-        <section class="degree-section">
-            <h1>Degrees</h1>
-            <div class="degree">
-                <h3>Bachelor of Science in Marketing</h3>
-                <p>Colorado State University System, 2024</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008" alt="Bachelor's Degree">
-            </div>
-            <div class="degree">
-                <h3>Associate of Arts</h3>
-                <p>Community College of Aurora, 2005</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125" alt="Associate's Degree">
-            </div>
-        </section>
-        <section class="certificate-section">
-            <h1>Certificates</h1>
-            <div class="certificate">
-                <h3>Digital Marketing</h3>
-                <p>Issued by Colorado State University System, 2024</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Digital_Marketing.png?v=1741746851" alt=Digital Marketing Certification">
-            </div>
-            <div class="certificate">
-                <h2>CompTIA A+ Certified Professional IT Technician</h2>
-                <p>Issued by The Computing Technology Industry Association (CompTIA), 2008</p>
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129" alt="CompTIA A+ Certification">
-            </div>
-               <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-      🔙 Back to Portfolio
-    </a>
-            <br>
-            <br>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
+        <main>
+            <section class="education-section">
+                <div class="education">
+                    <h2>Bachelor of Science in Marketing</h2>
+                    <p>Colorado State University System, 2024</p>
+                    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008" alt="Bachelor's Degree">
+                </div>
+
+                <div class="education">
+                    <h2>Associate of Arts</h2>
+                    <p>Community College of Aurora, 2005</p>
+                    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125" alt="Associate's Degree">
+                </div>
+
+                <div class="education">
+                    <h2>Digital Marketing Certification</h2>
+                    <p>Issued by Colorado State University System, 2024</p>
+                    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Digital_Marketing.png?v=1741746851" alt="Digital Marketing Certification">
+                </div>
+
+                <div class="education">
+                    <h2>CompTIA A+ Certified Professional IT Technician</h2>
+                    <p>Issued by The Computing Technology Industry Association (CompTIA), 2008</p>
+                    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129" alt="CompTIA A+ Certification">
+                </div>
+            </section>
+
+            <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+                🔙 Back to Portfolio
+            </a>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
