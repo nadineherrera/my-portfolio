@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👩🏻‍💼 My Professional Resume</title>
+    <title>📄 My Professional Resume</title>
     <style>
         body {
             background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
@@ -12,16 +12,14 @@
             background-repeat: no-repeat;
             color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
-            text-align: left;
             margin: 0;
-            padding: 20px;
+            padding: 20px; /* Reduced from 50px */
         }
 
         .container {
-            max-width: 90%px;
-            margin: 0 auto;
+            max-width: 90%; /* Adjusted for better alignment */
+            margin-left: 0; /* Aligns everything to the left */
             padding: 20px;
-            
         }
 
         h1 {
@@ -42,33 +40,33 @@
         .resume {
             margin-bottom: 30px;
         }
-        
+
         img {
-                display: block;
-                margin: 0 auto;
-                max-width: 100%
-                height: auto;
-                border-radius: 14px;
+            display: block;
+            margin-left: 0; /* Forces image to align left */
+            max-width: 100%;
+            height: auto;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
             }
 
-            @media (max-width 768px) {
-                body {
-                    padding: 10px;
-                }
-
-        .container {
+            .container {
                 max-width: 100%;
                 padding: 10px;
-        }
-                
-         img {
+            }
+
+            img {
                 width: 100%;
                 height: auto;
             }
         }
-        
+
         .back-button {
-            display: inline- block;
+            display: inline-block;
             background-color: #ffffff;
             color: #000000;
             font-size: 18px;
@@ -86,6 +84,7 @@
         }
 
         footer {
+            text-align: left; /* Ensures footer is aligned left */
             margin-top: 40px;
             font-size: 14px;
         }
@@ -99,8 +98,11 @@
         </header>
 
         <main>
-            <section class="resume">
-                <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume_Page_1.png?v=1741845040" alt="Professional Resume">
+            <section class="resume-section">
+                <h1>Resume</h1>
+                <div class="resume">
+                    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume_Page_1.png?v=1741845040" alt="Professional Resume">
+                </div>
             </section>
 
             <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
