@@ -13,35 +13,29 @@
             font-family: "Arial", sans-serif;
             color: #fff;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
-        /* Wrapper for title, description, and footer */
+        /* Main container to align with portfolio */
         .container {
-            width: 100%;
-            max-width: 600px; 
-            margin: 0 auto; 
+            width: 95%;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
             text-align: left;
         }
 
-        /* Title Alignment */
-        .container h1 {
+        /* Title & Description Alignment */
+        h1, p {
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            max-width: 100%;
         }
 
-        /* Project description alignment */
-        .project-description {
-            text-align: left;
-            line-height: 1.6;
-            color: #cccccc;
-        }
-
-        /* Tile Styling (Fixing Background Issues) */
+        /* Tile Styling */
         .tile {
-            max-width: 600px;
-            margin: 20px auto;
+            max-width: 800px;
+            margin: 30px auto;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,7 +43,7 @@
             text-align: center;
         }
 
-        /* Restoring Shrimp Tile Background */
+        /* Shrimp Tile */
         .shrimp {
             background: #d26500;
             border: 2px solid #d26500;
@@ -64,7 +58,7 @@
             color: #d26500;
         }
 
-        /* Restoring Roast Tile Background */
+        /* Roast Tile */
         .roast {
             background: #0056b3;
             border: 2px solid #004080;
@@ -88,7 +82,7 @@
             margin: 0 auto;
         }
 
-        /* Back button alignment */
+        /* Back Button Styling */
         .back-button {
             display: inline-block;
             background-color: #ffffff;
@@ -100,89 +94,68 @@
             border: 2px solid #ffffff;
             transition: background-color 0.3s ease, color 0.3s ease;
             margin-top: 20px;
-            width: auto; /* Prevents full width */    
-
+            margin-left: 0;
+            width: fit-content;
         }
-        
+
         .back-button:hover {
             background-color: #f7f7f7;
             color: #000000;
         }
 
-        /* Fixing button alignment */
-        .make-button {
-            display: block;
-            margin: 20px auto;
-            background: #fff;
-            font-size: 18px;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            transition: all 200ms ease-in-out;
-            text-decoration: none;
-        }
-
-        .shrimp .make-button {
-            color: #d26500;
-        }
-
-        .roast .make-button {
-            color: #0056b3;
-        }
-
-        .make-button:hover {
-            opacity: 0.9;
-            cursor: pointer;
-        }
-
         /* Footer Alignment */
-        footer {
-            text-align: left;
-            max-width: 600px;
-            margin: 40px auto;
-            font-size: 14px;
-            width: 100%;
+        .footer-container {
+            max-width: 800px;
+            margin-top: 80px;
+            padding-left: 0;
         }
 
+        footer p {
+            text-align: left;
+            margin: 0;
+        }
+        
         /* Mobile Optimization */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
             .container {
-                max-width: 95%;
-                padding: 15px;
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            h1, p {
+                text-align: left;
+                max-width: 100%;
             }
 
             .tile {
-                width: 90%;
+                width: 100%;
                 padding: 15px;
             }
-            
-    .back-button {
+
+            .back-button {
                 width: fit-content;
-            }
-            
-            footer {
-                text-align: left;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Content Wrapper: Title & Description -->
     <div class="container">
-        <h1>🍽️ Recipe Cards Project</h1>
-
-        <div class="project-description">
+        <header>
+            <h1>🍽️ Recipe Cards Project</h1>
             <p>This project showcases interactive recipe cards that I designed using <strong>HTML, CSS, and JavaScript</strong>.</p>
             <p>The goal was to create a user-friendly and visually appealing interface where users can explore different recipes with <strong>smooth animations and responsive layouts</strong>.</p>
             <p>I used <strong>HTML</strong> to structure the recipe cards, <strong>CSS</strong> for styling and layout design, and <strong>JavaScript</strong> to add interactive elements such as dynamic content loading, hover effects, and toggling recipe details.</p>
             <p>Each card is designed to be <strong>responsive</strong>, ensuring a great user experience across different screen sizes.</p>
             <p>This project demonstrates my ability to build functional, interactive, and well-styled front-end web applications.</p>
-        </div>
+        </header>
     </div>
 
-    <!-- ✅ Tiles Fully Restored! ✅ -->
+    <!-- ✅ Tiles Fully Aligned ✅ -->
     <div class="tile shrimp">
         <h1>I ❤️ Shrimp Linguini</h1>
         <h2>Especially when it's made with <em>Lemon</em> 🍋 and <em>Garlic</em> 🧄</h2>
@@ -202,13 +175,20 @@
             <button class="make-button">👉 Make Mississippi Pot Roast</button>
         </a>
     </div>
-     <div class="container">
-        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">🔙 Back to Portfolio</a>
+
+    <!-- Back Button -->
+    <div class="container">
+        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+            🔙 Back to Portfolio
+        </a>
     </div>
-    <!-- Footer (Properly Aligned) -->
-    <footer>
-        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
+
+    <!-- Footer (Properly Spaced) -->
+    <div class="footer-container">
+        <footer>
+            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
