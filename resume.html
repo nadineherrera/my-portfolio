@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📄 My Professional Resume</title>
+    <title>🏢 My Professional Resume</title>
     <style>
         body {
             background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
@@ -17,19 +17,14 @@
         }
 
         .container {
-            max-width: 90%; /* Adjusted for better alignment */
-            margin-left: 0; /* Aligns everything to the left */
+            width: 100%
+            max-width: 1000%; /* Adjusted for better alignment */
+            margin: 0; /* Aligns everything to the left */
             padding: 20px;
         }
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
+        h1 p {
+            text-align: left;
             margin-bottom: 10px;
         }
 
@@ -38,17 +33,18 @@
         }
 
         .resume {
-            margin-bottom: 30px;
+            width: 100%;
+            max-width: 800px; /* Ensures resume image is well-proportioned */
+            margin: 0 auto; /* Centers image */
         }
 
-        img {
+            .resume img {
             display: block;
-            margin-left: 0; /* Forces image to align left */
-            max-width: 100%;
+            width: 100%;
             height: auto;
             border-radius: 14px;
         }
-
+        
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -58,10 +54,8 @@
                 max-width: 100%;
                 padding: 10px;
             }
-
-            img {
-                width: 100%;
-                height: auto;
+            .resume {
+                max-width: 100%; /* Ensures it scales properly on mobile */
             }
         }
 
