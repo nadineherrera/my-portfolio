@@ -67,18 +67,19 @@
             color: #000000;
         }
 
-        /* Footer alignment */
+          /* ✅ Fixed Footer Alignment */
         footer {
-            text-align: left;
-            max-width: 95%;
-            margin: 40px auto;
-            font-size: 14px;
-            width: 100%;
+            max-width: 800px; /* Matches text width */
+            margin: 40px auto 0; /* Ensures footer aligns with content */
+            text-align: left; /* Left-aligns footer text */
+            padding-left: 20px; /* Matches container padding */
         }
-footer p {
-            margin-left: 0; /* Aligns with body text */
+
+        footer p {
+            margin: 0;
             text-align: left;
         }
+        
         /* Mobile Optimization */
         @media (max-width: 768px) {
             body {
