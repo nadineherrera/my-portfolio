@@ -7,9 +7,9 @@
     <style>
         body {
             background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
             font-family: "Arial", sans-serif;
             color: #fff;
             margin: 0;
@@ -115,7 +115,8 @@
         }
 
         .back-button {
-        display: inline-block;
+        display: block;
+        width: fit-content;
         background-color: #ffffff;
         color: #000000;
         font-size: 18px;
@@ -131,11 +132,27 @@
         background-color: #f7f7f7;
         color: #000000;
       }
+        
      footer {
             text-align: center;
             margin-top: 40px;
             font-size: 14px;
             width: 100%;
+        }
+
+         @media (max-width: 768px) {
+            .tile {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            footer {
+                text-align: center;
+            }
         }
         
     </style>
