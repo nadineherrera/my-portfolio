@@ -17,8 +17,8 @@
         }
 
         .container {
-            width: 100%
-            max-width: 1000%; /* Adjusted for better alignment */
+            width: 100%;
+            max-width: 800%; /* Adjusted for better alignment */
             margin: 0; /* Aligns everything to the left */
             padding: 20px;
         }
@@ -44,20 +44,6 @@
             height: auto;
             border-radius: 14px;
         }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .container {
-                max-width: 100%;
-                padding: 10px;
-            }
-            .resume {
-                max-width: 100%; /* Ensures it scales properly on mobile */
-            }
-        }
 
         .back-button {
             display: inline-block;
@@ -81,6 +67,20 @@
             text-align: left; /* Ensures footer is aligned left */
             margin-top: 40px;
             font-size: 14px;
+        }
+
+            @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+            .resume {
+                max-width: 100%; /* Ensures it scales properly on mobile */
+            }
         }
     </style>
 </head>
