@@ -16,35 +16,37 @@
             padding: 20px;
         }
 
-        /* Main container to align with portfolio */
+        /* Main content container */
         .container {
-            width: 95%;
+            width: 90%;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             text-align: left;
         }
 
-        /* Title & Description Alignment */
+        /* Title & description alignment */
         h1, p {
             text-align: left;
             max-width: 100%;
             margin-bottom: 10px;
         }
 
-       .tile {
-    width: 85%; /* Adjust width dynamically */
-    max-width: 500px; /* Prevents it from being too wide */
-    margin: 20px auto; /* Centers it */
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    text-align: center;
-       }
+        /* ✅ Tile Fix: Adjusted width for better mobile fit */
+        .tile {
+            width: 90%; /* Prevents overflow */
+            max-width: 500px; /* Keeps it balanced */
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            text-align: center;
+        }
 
         .tile h1 {
             text-align: center;
+            font-size: 22px;
             margin-bottom: 10px;
         }
         
@@ -57,8 +59,8 @@
         .shrimp h2 {
             background-color: #fff;
             border: 5px solid #de5d17;
-            padding: 15px;
-            font-size: 18px;
+            padding: 12px;
+            font-size: 16px;
             border-radius: 15px;
             color: #d26500;
         }
@@ -72,8 +74,8 @@
         .roast h2 {
             background-color: #fff;
             border: 5px solid #004080;
-            padding: 15px;
-            font-size: 18px;
+            padding: 12px;
+            font-size: 16px;
             border-radius: 15px;
             color: #0056b3;
         }
@@ -87,20 +89,13 @@
             margin: 0 auto;
         }
 
-        .shrimp .make-button {
-            color: #d26500;
-        }
-
-        .roast .make-button {
-            color: #0056b3;
-        }
-
+        /* Button styling */
         .make-button {
             display: block;
-            margin: 20px auto;
+            margin: 15px auto;
             background: #fff;
-            font-size: 18px;
-            padding: 15px 20px;
+            font-size: 16px;
+            padding: 12px 18px;
             border: none;
             border-radius: 8px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -112,22 +107,21 @@
             opacity: 0.9;
             cursor: pointer;
         }
-        
-        /* Back Button Styling */
+
+        /* Back Button - Left Aligned */
         .back-button {
             display: inline-block;
             background-color: #ffffff;
             color: #000000;
-            font-size: 18px;
-            padding: 12px 20px;
+            font-size: 16px;
+            padding: 12px 18px;
             text-decoration: none;
             border-radius: 8px;
             border: 2px solid #ffffff;
             transition: background-color 0.3s ease, color 0.3s ease;
-            margin: 40px auto; /* Centers the button */
-            display: block;
-            text-align: center;
-            width: fit-content;
+            margin-top: 30px;
+            margin-left: 0; /* Left-aligns button */
+            width: auto;
         }
 
         .back-button:hover {
@@ -135,21 +129,20 @@
             color: #000000;
         }
 
-   .footer-container {
-    max-width: 600px; /* Matches the main content width */
-    margin: 50px auto 0; /* Centers it & adds space */
-    text-align: left; /* Keeps text aligned */
-    padding: 0 20px; /* Adds padding for better spacing */
-}
-
+        /* Footer Alignment */
+        .footer-container {
+            max-width: 600px;
+            margin-top: 50px;
+            text-align: left;
+            padding: 0 20px;
         }
 
-       footer p {
-    text-align: left;
+        footer p {
+            text-align: left;
             margin: 0;
-}
-        
-        /* Mobile Optimization */
+        }
+
+        /* ✅ Mobile Fixes */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -166,17 +159,16 @@
             }
 
             .tile {
-                width: 95%;
-                max-width: 500px;
-                padding: 15px;
+                width: 90%; /* Ensures it stays within screen */
+                max-width: 400px;
+                padding: 12px;
             }
 
             .back-button {
-                width: fit-content;
-                margin-left: auto;
-                margin-right: auto;
+                width: auto;
+                margin-left: 0; /* Ensures left alignment */
             }
-            
+        }
     </style>
 </head>
 <body>
@@ -213,12 +205,10 @@
         </a>
     </div>
 
-    <!-- Back Button -->
-    <div class="container">
-        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-            🔙 Back to Portfolio
-        </a>
-    </div>
+    <!-- Back Button (Left-Aligned) -->
+    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+        🔙 Back to Portfolio
+    </a>
 
     <!-- Footer (Properly Spaced) -->
     <div class="footer-container">
