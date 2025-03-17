@@ -1,134 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-      body {
-        background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: left;
-        max-width: 95%;
-        margin: 0;
-        padding: 20px;
-      }
-      .nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 30px;
-        background: rgba(16,73,133, 0.7);
-        padding: 15px;
-        border-radius: 10px;
-        margin: 0 auto;
-        max-width: 100%;
-        text-align: left;
-      }
-      .nav a {
-        color: #ffffff;
-        text-decoration: underline; 
-        font-size: 14px; 
-        font-weight: bold; 
-        padding: 10px 15px;
-        border-radius: 5px;
-      transition: 0.3s ease;
-      }
-      .nav a:hover {
-        color: #f7f7f7; 
-      }
-    ul {
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        list-style-type: none;
-        padding: 0;
-        text-align: left;
-      }
-      button {
-        display: block;
-        margin: 0 auto;
-      }
-      .profile-photo {
-        width: 160px; 
-        height: 160px; 
-        border-radius: 50%; 
-        border: 3px solid #ffffff; 
-        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); 
-        object-fit: cover; 
-      }
-       h5 {
-        text-align: left;
-        max-width: 100%; 
-        margin: 0 auto; 
-      }
-       p {
-        text-align: left;
-        max-width: 100%; 
-        margin: 0 auto; 
-      }
+        body {
+            background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center; /* Centers main elements */
+        }
+
+        /* ✅ Centered Navigation */
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centers nav links */
+            gap: 30px;
+            background: rgba(16,73,133, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 90%;
+            margin: 0 auto; /* Centers nav */
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: underline; 
+            font-size: 14px; 
+            font-weight: bold; 
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #f7f7f7; 
+        }
+
+        /* ✅ Centered Profile Picture */
+        .profile-photo {
+            width: 160px; 
+            height: 160px; 
+            border-radius: 50%; 
+            border: 3px solid #ffffff; 
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); 
+            object-fit: cover; 
+            display: block;
+            margin: 0 auto; /* Centers image */
+        }
+
+        /* ✅ Left-aligned Headers & Paragraphs */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center; /* Centers the main title */
+        }
+
+        h5, p {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        /* ✅ Centered Footer */
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        footer p {
+            text-align: center;
+            margin: 0;
+        }
+
+        /* ✅ Mobile Optimization */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                max-width: 95%;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            h5, p {
+                text-align: left;
+            }
+
+            .footer-container {
+                justify-content: center;
+            }
+        }
     </style>
-  </head>
-  <body>
-      <h1>Hi, 👋🏽 I'm Nadine!</h1>
-    <br>
+</head>
+<body>
+
+    <!-- ✅ Centered Title -->
+    <h1>Hi, 👋🏽 I'm Nadine!</h1>
+
+    <!-- ✅ Centered Profile Picture -->
     <img 
-      src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
-      alt="Profile Picture" 
-      class="profile-photo"
+        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
+        alt="Profile Picture" 
+        class="profile-photo"
     />
-    <br>
-    <br>
-    <br>
-    <h5>Carpe Facto Advisor at Apple | Product Insights & Technical Specialist | AI & Cloud Computing Enthusiast | Customer-Centric Innovator | Entrepreneur & Brand Builder</h5>
-    <br>
-      <h1>This is my digital portfolio—a space where I share my work in tech, my career journey, and my business ventures.</h1>
-    <br>
-      <p>As a Carpe Facto Advisor at Apple, I analyze product performance, spot trends, and provide insights that help improve engineering, hardware, and software.</p>
+
+    <br><br>
+
+    <!-- ✅ Left-Aligned Content -->
+    <div class="content">
+        <h5>Carpe Facto Advisor at Apple | Product Insights & Technical Specialist | AI & Cloud Computing Enthusiast | Customer-Centric Innovator | Entrepreneur & Brand Builder</h5>
         <br>
-      <p>My work connects real customer experiences to product development, making sure feedback leads to real innovation.</p>
-          <br>
-      <p>Outside of tech, I run Alchemy Body Werks, a plant-based personal care brand rooted in self-care, wellness, and sustainability. 
+        <h1>This is my digital portfolio—a space where I share my work in tech, my career journey, and my business ventures.</h1>
         <br>
-      <p>I'm also diving deeper into AI, cloud computing, and coding, sharpening my skills in HTML, CSS, and Python to build seamless, engaging digital experiences.</p>
-    <br>
-      <p>🚀 Always learning, creating, and pushing boundaries. Let’s connect and build something amazing!</p>
-    <br>
-    <br>
-    <ul nav class="nav">
-      <li class="nav_list_items">
-        <a href="https://nadineherrera.github.io/my-portfolio/projects">
-          Projects
-        </a>
-      </li>
-      <li class "nav_list_items">
-        <a href="https://nadineherrera.github.io/my-portfolio/education">
-        Education
-        </a>
+        <p>As a Carpe Facto Advisor at Apple, I analyze product performance, spot trends, and provide insights that help improve engineering, hardware, and software.</p>
+        <br>
+        <p>My work connects real customer experiences to product development, making sure feedback leads to real innovation.</p>
+        <br>
+        <p>Outside of tech, I run Alchemy Body Werks, a plant-based personal care brand rooted in self-care, wellness, and sustainability.</p>
+        <br>
+        <p>I'm also diving deeper into AI, cloud computing, and coding, sharpening my skills in HTML, CSS, and Python to build seamless, engaging digital experiences.</p>
+        <br>
+        <p>🚀 Always learning, creating, and pushing boundaries. Let’s connect and build something amazing!</p>
+    </div>
+
+    <br><br>
+
+    <!-- ✅ Centered Navigation Bar -->
+    <ul class="nav">
+        <li class="nav_list_items">
+            <a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a>
         </li>
-      <li class="nav_list_items">
-        <a href="https://nadineherrera.github.io/my-portfolio/resume">
-          Resume
-        </a>
+        <li class="nav_list_items">
+            <a href="https://nadineherrera.github.io/my-portfolio/education">Education</a>
         </li>
-      <li class="nav_list_items">
-        <a href="https://alchemybodywerks.com/">
-          Brand Website
-        </a>
+        <li class="nav_list_items">
+            <a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a>
+        </li>
+        <li class="nav_list_items">
+            <a href="https://alchemybodywerks.com/">Brand Website</a>
         </li>
     </ul>
-    </nav>
-    </header>
-    <br>
-    <br>
-    <br>
-          </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
-  </body>
+
+    <br><br>
+
+    <!-- ✅ Centered Footer -->
+    <div class="footer-container">
+        <footer>
+            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
 </html>
