@@ -18,21 +18,23 @@
             text-align: center; /* Centers title, profile image, footer */
         }
 
-        /* ✅ Centered Navigation and Removed Bullets */
-        .nav-menu {
-            list-style-type: none;   /* Remove bullet points */
-            margin: 20px 0;
-            padding: 0;
-            display: flex;                  
-            justify-content: center; /* Centers navigation links */
-            align-items: center;            
-            gap: 20px;                      
-        }
+    /* ✅ Make Navigation Bar Full Width */
+.nav-menu {
+    list-style-type: none;   /* Remove bullet points */
+    margin: 0;
+    padding: 10px 0;        /* Adds spacing inside the bar */
+    display: flex;
+    justify-content: center; /* Center navigation links */
+    align-items: center;
+    gap: 20px;
+    background: rgba(16,73,133, 0.9); /* Full-width background color */
+    width: 100vw; /* Ensures it spans the full width of the viewport */
+}
 
-        /* Ensures list items are in a row */
-        .nav-menu li {
-            display: inline-block;
-        }
+/* ✅ Ensures navigation items stay inside the full-width nav */
+.nav-menu li {
+    display: inline-block;
+}
 
         /* Navigation link styling */
         .nav-menu li a {
