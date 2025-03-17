@@ -14,27 +14,28 @@
             color: #fff;
             margin: 0;
             padding: 20px;
+            text-align: center; /* Centers all text */
         }
 
-  
+        /* Main content container */
         .container {
             width: 90%;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            text-align: left;
         }
 
-    
+        /* Title and paragraph alignment */
         h1, p {
-            text-align: left;
+            text-align: center;
             max-width: 100%;
             margin-bottom: 10px;
         }
 
+        /* Tiles - Adjusted for mobile optimization */
         .tile {
-            width: 90%; /* Prevents overflow */
-            max-width: 500px; /* Keeps it balanced */
+            width: 90%;
+            max-width: 400px;
             margin: 20px auto;
             padding: 15px;
             border-radius: 15px;
@@ -48,7 +49,7 @@
             font-size: 22px;
             margin-bottom: 10px;
         }
-        
+
         /* Shrimp Tile */
         .shrimp {
             background: #d26500;
@@ -64,7 +65,7 @@
             color: #d26500;
         }
 
-
+        /* Roast Tile */
         .roast {
             background: #0056b3;
             border: 2px solid #004080;
@@ -79,7 +80,7 @@
             color: #0056b3;
         }
 
-
+        /* Image inside tiles */
         .tile img {
             display: block;
             max-width: 100%;
@@ -88,6 +89,7 @@
             margin: 0 auto;
         }
 
+        /* Make button */
         .make-button {
             display: block;
             margin: 15px auto;
@@ -105,79 +107,62 @@
             opacity: 0.9;
             cursor: pointer;
         } 
-        
-/* Back Button Container - Matches Main Content Alignment */
-.back-button-container {
-    max-width: 800px; /* Matches text width */
-    margin: 50px auto 0; /* Ensures spacing from bottom tile */
-    text-align: left; /* Aligns with body text */
-    padding-left: 20px; /* Adjust this to fine-tune alignment */
-}
 
-/* Back Button Styling */
-.back-button {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
-    padding: 12px 18px;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: auto;
-}
+        /* Back Button - Centered */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
 
-.back-button:hover {
-    background-color: #f7f7f7;
-    color: #000000;
-}
+        .back-button {
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 16px;
+            padding: 12px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-        /* ✅ Mobile Optimization */
-@media (max-width: 768px) {
-    .back-button-container {
-        padding-left: 10px; /* Adjust for smaller screens */
-    }
-}
-        
-        /* Footer Alignment */
-         .footer-container {
-            max-width: 800px;
-            margin: 50px auto 0; /* Centers & adds space */
-            text-align: left;
-            padding-left: 20px; /* Aligns with body text */
+        .back-button:hover {
+            background-color: #f7f7f7;
+            color: #000000;
+        }
+
+        /* Footer - Centered */
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-align: center;
         }
 
         footer p {
-            text-align: left;
             margin: 0;
         }
 
-      
+        /* Mobile Optimization */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
             .container {
                 max-width: 95%;
                 padding: 10px;
             }
 
             h1, p {
-                text-align: left;
+                text-align: center;
                 max-width: 100%;
             }
 
             .tile {
-                width: 90%; /* Ensures it stays within screen */
+                width: 90%;
                 max-width: 400px;
                 padding: 12px;
             }
 
             .back-button {
                 width: auto;
-                margin-left: 0; /* Ensures left alignment */
             }
         }
     </style>
@@ -195,7 +180,7 @@
         </header>
     </div>
 
-    <!-- ✅ Tiles Fully Aligned ✅ -->
+    <!-- ✅ Tiles Fully Centered ✅ -->
     <div class="tile shrimp">
         <h1>I ❤️ Shrimp Linguini</h1>
         <h2>Especially when it's made with <em>Lemon</em> 🍋 and <em>Garlic</em> 🧄</h2>
@@ -216,12 +201,14 @@
         </a>
     </div>
 
-  <div class="back-button-container">  
-    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-        🔙 Back to Portfolio
-    </a>
+    <!-- ✅ Centered Back Button ✅ -->
+    <div class="back-button-container">
+        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+            🔙 Back to Portfolio
+        </a>
+    </div>
 
-    <!-- Footer (Properly Spaced) -->
+    <!-- ✅ Centered Footer ✅ -->
     <div class="footer-container">
         <footer>
             <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
