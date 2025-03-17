@@ -14,17 +14,21 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 20px;
+            text-align: center; /* Centers title, back button, and footer */
         }
 
         .container {
-            width: 95%;
+            width: 90%;
             max-width: 800px; /* Matches resume page */
             margin: 0 auto;
             padding: 20px;
-            text-align: left;
         }
 
-        h1, p {
+        h1 {
+            text-align: center;
+        }
+        
+        p {
             text-align: left;
             max-width: 100%;
             margin-bottom: 10px;
@@ -43,19 +47,23 @@
             margin-bottom: 20px;
         }
 
-        /* Back Button Alignment */
+        
+        /* Back Button - Centered */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
         .back-button {
-            display: inline-block;
             background-color: #ffffff;
             color: #000000;
-            font-size: 18px;
-            padding: 12px 20px;
+            font-size: 16px;
+            padding: 12px 18px;
             text-decoration: none;
             border-radius: 8px;
             border: 2px solid #ffffff;
             transition: background-color 0.3s ease, color 0.3s ease;
-            margin-top: 20px;
-            width: fit-content;
         }
 
         .back-button:hover {
@@ -63,13 +71,18 @@
             color: #000000;
         }
 
-        footer {
-            text-align: left;
-            margin-top: 40px;
-            font-size: 14px;
-            width: 100%;
+        /* Footer - Centered */
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-align: center;
         }
 
+        footer p {
+            text-align: center;
+            margin: 0;
+        }
         /* Mobile Optimization */
         @media (max-width: 768px) {
             body {
