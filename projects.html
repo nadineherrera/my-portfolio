@@ -32,16 +32,16 @@
             margin-bottom: 10px;
         }
 
-        /* Tile Styling */
-        .tile {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: #fff;
-            text-align: center;
-        }
+       .tile {
+    width: 90%; /* Adjust width dynamically */
+    max-width: 600px; /* Prevents it from being too wide */
+    margin: 20px auto; /* Centers it */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
+       }
 
         .tile h1 {
             text-align: center;
@@ -124,9 +124,9 @@
             border-radius: 8px;
             border: 2px solid #ffffff;
             transition: background-color 0.3s ease, color 0.3s ease;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 0;
+            margin: 40px auto; /* Centers the button */
+            display: block;
+            text-align: center;
             width: fit-content;
         }
 
@@ -136,7 +136,7 @@
         }
 
    .footer-container {
-    max-width: 800px; /* Matches the main content width */
+    max-width: 600px; /* Matches the main content width */
     margin: 50px auto 0; /* Centers it & adds space */
     text-align: left; /* Keeps text aligned */
     padding: 0 20px; /* Adds padding for better spacing */
@@ -146,8 +146,7 @@
 
        footer p {
     text-align: left;
-    margin: 0;
-    padding-bottom: 20px; /* Adds padding at the bottom */
+            margin: 0;
 }
         
         /* Mobile Optimization */
@@ -157,7 +156,7 @@
             }
 
             .container {
-                max-width: 100%;
+                max-width: 95%;
                 padding: 10px;
             }
 
@@ -167,14 +166,17 @@
             }
 
             .tile {
-                width: 100%;
+                width: 95%;
+                max-width: 500px;
                 padding: 15px;
             }
 
             .back-button {
                 width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
             }
-        }
+            
     </style>
 </head>
 <body>
