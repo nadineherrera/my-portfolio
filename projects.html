@@ -106,13 +106,15 @@
             cursor: pointer;
         } 
         
+/* Back Button Container - Matches Main Content Alignment */
 .back-button-container {
-    max-width: 800px; 
-    margin: 40px auto 0; 
-    text-align: left; 
-    padding-left: 20px; 
+    max-width: 800px; /* Matches text width */
+    margin: 50px auto 0; /* Ensures spacing from bottom tile */
+    text-align: left; /* Aligns with body text */
+    padding-left: 20px; /* Adjust this to fine-tune alignment */
 }
 
+/* Back Button Styling */
 .back-button {
     display: inline-block;
     background-color: #ffffff;
@@ -131,6 +133,13 @@
     color: #000000;
 }
 
+        /* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+    .back-button-container {
+        padding-left: 10px; /* Adjust for smaller screens */
+    }
+}
+        
         /* Footer Alignment */
          .footer-container {
             max-width: 800px;
@@ -207,7 +216,7 @@
         </a>
     </div>
 
-    <!-- Back Button (Left-Aligned) -->
+  <div class="back-button-container">  
     <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
         🔙 Back to Portfolio
     </a>
