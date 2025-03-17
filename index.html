@@ -19,39 +19,57 @@
         }
 
     /* ✅ Make Navigation Bar Full Width */
-.nav-menu {
-    list-style-type: none;   /* Remove bullet points */
-    margin: 0;
-    padding: 10px 0;        /* Adds spacing inside the bar */
+/* ✅ Full-width Navigation Bar */
+.nav-container {
+    width: 100vw;  /* Ensures full width of viewport */
+    background: rgba(16,73,133, 0.9); /* Background color */
+    padding: 10px 0; /* Spacing inside the navbar */
     display: flex;
-    justify-content: center; /* Center navigation links */
+    justify-content: center; /* Centers the nav items */
+}
+
+/* ✅ Centered Navigation and Remove Bullets */
+.nav-menu {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center nav links horizontally */
     align-items: center;
-    gap: 20px;
-    background: rgba(16,73,133, 0.9); /* Full-width background color */
-    width: 100vw; /* Ensures it spans the full width of the viewport */
+    gap: 20px; /* Space between links */
+    width: 100%; /* Ensures it stretches */
 }
 
-/* ✅ Ensures navigation items stay inside the full-width nav */
-.nav-menu li {
+/* ✅ Styled Navigation Links */
+.nav-menu li a {
+    text-decoration: none;
     display: inline-block;
+    padding: 12px 20px; /* Adds proper spacing */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    background: rgba(16,73,133, 1); /* Solid background */
+    border-radius: 5px; /* Rounded edges */
+    transition: 0.3s ease;
 }
 
-        /* Navigation link styling */
-        .nav-menu li a {
-            text-decoration: none;
-            display: inline-block;
-            padding: 10px 20px;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            background: rgba(16,73,133, 0.9); /* Less transparent */
-            border-radius: 8px;
-            transition: 0.3s ease;
-        }
+/* ✅ Hover Effect */
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+}
 
-        .nav-menu li a:hover {
-            background-color: rgba(16,73,133, 1); /* Fully opaque on hover */
-        }
+/* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-wrap: wrap; /* Allows wrapping for smaller screens */
+        gap: 10px;
+    }
+
+    .nav-menu li a {
+        padding: 10px 15px; /* Smaller padding for mobile */
+    }
+}
+
 
         /* ✅ Profile Image Centered */
         .profile-photo {
