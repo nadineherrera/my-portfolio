@@ -14,7 +14,7 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 20px;
-            text-align: center; /* Centers title, profile image, footer */
+            text-align: center; 
         }
 
 .nav-container {
@@ -26,7 +26,7 @@
 }
 
 .nav-menu {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -40,7 +40,7 @@
     text-decoration: none;
     display: inline-block;
     padding: 12px 20px; 
-    color: 
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     background: rgba(16,73,133, 1); 
@@ -49,23 +49,22 @@
 }
 
 .nav-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
-/* ✅ Mobile Optimization */
+
 @media (max-width: 768px) {
     .nav-menu {
-        flex-wrap: wrap; /* Allows wrapping for smaller screens */
+        flex-wrap: wrap; 
         gap: 10px;
     }
 
     .nav-menu li a {
-        padding: 10px 15px; /* Smaller padding for mobile */
+        padding: 10px 15px; 
     }
 }
 
 
-        /* ✅ Profile Image Centered */
         .profile-photo {
             width: 160px; 
             height: 160px; 
@@ -74,30 +73,27 @@
             box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
             object-fit: cover;
             display: block;
-            margin: 20px auto; /* Centers profile image */
+            margin: 20px auto; 
         }
 
-        /* Header Styling */
         h1 {
             font-size: 28px;
             margin-top: 10px;
             text-align: center;
         }
 
-        /* ✅ Left-Aligned Paragraphs */
         .content {
             max-width: 600px;
-            margin: 0 auto; /* Centers the section */
-            text-align: left; /* Left-aligns all paragraphs */
+            margin: 0 auto; 
+            text-align: left; 
         }
 
         p {
-            text-align: left; /* Ensures all paragraphs are left-aligned */
+            text-align: left; 
             line-height: 1.6;
             margin-bottom: 15px;
         }
 
-        /* ✅ Centered Footer */
         .footer-container {
             margin-top: 50px;
             text-align: center;
@@ -111,7 +107,6 @@
 </head>
 <body>
 
-    <!-- ✅ Title and Profile Image Centered -->
     <h1>Hi, 👋🏽 I'm Nadine!</h1>
     <img 
         src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
@@ -121,7 +116,6 @@
 
     <h1>This is my digital portfolio—a space where I share my work in tech, my career journey, and my business ventures.</h1>
 
-    <!-- ✅ Left-Aligned Paragraphs in a Centered Section -->
     <div class="content">
         <p>As a Carpe Facto Advisor at Apple, I analyze product performance, spot trends, and provide insights that help improve engineering, hardware, and software.</p>
 
@@ -134,7 +128,6 @@
         <p>🚀 Always learning, creating, and pushing boundaries. Let’s connect and build something amazing!</p>
     </div>
 
-    <!-- ✅ Centered Navigation Menu -->
     <nav>
         <ul class="nav-menu">
             <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
@@ -144,7 +137,6 @@
         </ul>
     </nav>
 
-    <!-- ✅ Centered Footer -->
     <div class="footer-container">
         <footer>
             <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
