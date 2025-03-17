@@ -18,16 +18,16 @@
             text-align: center; /* Centers text on the page */
         }
 
-        /* ✅ Centered Navigation and Removed Bullets */
         .nav-menu {
             list-style-type: none;   /* Remove bullet points */
-            margin: 20px 0;
+            margin: 20px auto;
             padding: 0;
-            display: flex;                  
+            max-width: 90%;  /* Ensures no overflow on mobile */
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping for small screens */
             justify-content: center; /* Centers navigation links */
             align-items: center;            
-            gap: 20px;                      
-        }
+            gap: 15px; /* Controls spacing between items *
 
         /* Ensures list items are in a row */
         .nav-menu li {
@@ -45,6 +45,7 @@
             background: rgba(16,73,133, 0.7);
             border-radius: 8px;
             transition: 0.3s ease;
+            white-space: nowrap; /* Prevents wrapping inside buttons */
         }
 
         .nav-menu li a:hover {
@@ -92,6 +93,28 @@
         footer p {
             text-align: center;
             font-size: 14px;
+        }
+            /* ✅ Mobile Optimization */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column; /* Stacks navigation links vertically */
+                gap: 10px; /* Less spacing for small screens */
+            }
+
+            .nav-menu li {
+                width: 100%; /* Makes each item take full width */
+                text-align: center;
+            }
+
+            .nav-menu li a {
+                display: block;
+                width: 100%; /* Makes buttons full width on small screens */
+                padding: 12px;
+            }
+
+            .content {
+                max-width: 90%; /* Keeps text readable on mobile */
+            }
         }
     </style>
 </head>
