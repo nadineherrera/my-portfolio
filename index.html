@@ -15,44 +15,10 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 20px;
-            text-align: center; /* Centers text on the page */
+            text-align: center; /* Centers title, profile image, and footer */
         }
 
-        .nav-menu {
-            list-style-type: none;   /* Remove bullet points */
-            margin: 20px auto;
-            padding: 0;
-            max-width: 90%;  /* Ensures no overflow on mobile */
-            display: flex;
-            flex-wrap: wrap; /* Allows wrapping for small screens */
-            justify-content: center; /* Centers navigation links */
-            align-items: center;            
-            gap: 15px; /* Controls spacing between items *
-
-        /* Ensures list items are in a row */
-        .nav-menu li {
-            display: inline-block;
-        }
-
-        /* Navigation link styling */
-        .nav-menu li a {
-            text-decoration: none;
-            display: inline-block;
-            padding: 10px 15px;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            background: rgba(16,73,133, 0.7);
-            border-radius: 8px;
-            transition: 0.3s ease;
-            white-space: nowrap; /* Prevents wrapping inside buttons */
-        }
-
-        .nav-menu li a:hover {
-            background-color: rgba(16,73,133, 1); /* Fully opaque on hover */
-        }
-
-        /* ✅ Profile Image Centered */
+        /* ✅ Restored Profile Image Styling */
         .profile-photo {
             width: 160px; 
             height: 160px; 
@@ -64,98 +30,32 @@
             margin: 20px auto; /* Centers profile image */
         }
 
-        /* Header Styling */
-        h1 {
-            font-size: 28px;
-            margin-top: 10px;
-            text-align: center;
+        /* ✅ Centered Navigation & Mobile-Friendly */
+        .nav-menu {
+            list-style-type: none;   /* Remove bullet points */
+            margin: 20px auto;
+            padding: 0;
+            max-width: 90%;  /* Ensures no overflow on mobile */
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping for small screens */
+            justify-content: center; /* Centers navigation links */
+            align-items: center;            
+            gap: 15px; /* Controls spacing between items */
         }
 
-          /* Paragraph Styling - Left-Aligned */
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left; /* Left-aligns text while keeping it centered */
+        /* Navigation link styling */
+        .nav-menu li {
+            display: inline-block;
         }
 
-        p {
-            text-align: left;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        /* ✅ Footer Centered */
-        .footer-container {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        footer p {
-            text-align: center;
-            font-size: 14px;
-        }
-            /* ✅ Mobile Optimization */
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-direction: column; /* Stacks navigation links vertically */
-                gap: 10px; /* Less spacing for small screens */
-            }
-
-            .nav-menu li {
-                width: 100%; /* Makes each item take full width */
-                text-align: center;
-            }
-
-            .nav-menu li a {
-                display: block;
-                width: 100%; /* Makes buttons full width on small screens */
-                padding: 12px;
-            }
-
-            .content {
-                max-width: 90%; /* Keeps text readable on mobile */
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- ✅ Title and Profile Image Centered -->
-    <h1>Hi, 👋🏽 I'm Nadine!</h1>
-    <img 
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
-        alt="Profile Picture" 
-        class="profile-photo"
-    />
-
-    <h1>This is my digital portfolio—a space where I share my work in tech, my career journey, and my business ventures.</h1>
-
-    <p>As a Carpe Facto Advisor at Apple, I analyze product performance, spot trends, and provide insights that help improve engineering, hardware, and software.</p>
-
-    <p>My work connects real customer experiences to product development, making sure feedback leads to real innovation.</p>
-
-    <p>Outside of tech, I run Alchemy Body Werks, a plant-based personal care brand rooted in self-care, wellness, and sustainability.</p>
-
-    <p>I'm also diving deeper into AI, cloud computing, and coding, sharpening my skills in HTML, CSS, and Python to build seamless, engaging digital experiences.</p>
-
-    <p>🚀 Always learning, creating, and pushing boundaries. Let’s connect and build something amazing!</p>
-
-    <!-- ✅ Centered Navigation Menu -->
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
-            <li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
-            <li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
-            <li><a href="https://alchemybodywerks.com/">Brand Website</a></li>
-        </ul>
-    </nav>
-
-    <!-- ✅ Centered Footer -->
-    <div class="footer-container">
-        <footer>
-            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-        </footer>
-    </div>
-
-</body>
-</html>
+        .nav-menu li a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 15px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            background: rgba(16,73,133, 0.9); /* Less transparent */
+            border-radius: 8px;
+            transition: 0.3s ease;
+            white-space: nowrap; /* Prevents wrap
