@@ -48,7 +48,7 @@
         }
 
         .nav-menu li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(16,73,133, 1); /* Fully opaque on hover */
         }
 
         /* ✅ Profile Image Centered */
@@ -70,12 +70,16 @@
             text-align: center;
         }
 
-        /* Paragraph Styling */
-        p {
-            text-align: center;
+          /* Paragraph Styling - Left-Aligned */
+        .content {
             max-width: 600px;
-            margin: 10px auto;
+            margin: 0 auto;
+            text-align: left; /* Left-aligns text while keeping it centered */
+        }
+
+        p {
             line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         /* ✅ Footer Centered */
