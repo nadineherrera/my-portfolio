@@ -10,30 +10,38 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
+            text-align: center; /* Centers title, image, and back button */
         }
 
+        /* Main container */
         .container {
-            width: 95%;
+            width: 90%;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            text-align: left;
         }
 
-        h1, p {
+        /* Title - Centered */
+        h1 {
+            text-align: center;
+        }
+
+        /* Paragraphs - Left Aligned */
+        p {
             text-align: left;
             max-width: 100%;
             margin-bottom: 10px;
         }
 
+        /* Resume Section */
         .resume-section {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 40px;
         }
 
@@ -43,19 +51,22 @@
             border-radius: 14px;
         }
 
+        /* Back Button - Centered */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
         .back-button {
-            display: inline-block;
             background-color: #ffffff;
             color: #000000;
-            font-size: 18px;
-            padding: 12px 20px;
+            font-size: 16px;
+            padding: 12px 18px;
             text-decoration: none;
             border-radius: 8px;
             border: 2px solid #ffffff;
             transition: background-color 0.3s ease, color 0.3s ease;
-            margin-top: 20px;
-            margin-left: 0; /* Aligns with paragraph */
-            width: fit-content;
         }
 
         .back-button:hover {
@@ -63,31 +74,32 @@
             color: #000000;
         }
 
+        /* Footer - Centered */
         .footer-container {
-            max-width: 800px;
-            margin-top: 120px; /* Increased space between button & footer */
-            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-align: center;
         }
 
         footer p {
-            text-align: left; /* Aligns footer text to the left */
+            text-align: center;
             margin: 0;
         }
-        
-    
+
+        /* Mobile Optimization */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
             .container {
-                max-width: 100%;
+                max-width: 95%;
                 padding: 10px;
             }
 
-            h1, p {
+            h1 {
+                text-align: center;
+            }
+
+            p {
                 text-align: left;
-                max-width: 100%;
             }
 
             .resume img {
@@ -95,36 +107,41 @@
             }
 
             .back-button {
-                width: fit-content;
+                width: auto;
             }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <header>
             <h1>👩🏻‍💻 My Professional Resume</h1>
             <p>Showcasing my leadership, strategy, and business skills.</p>
         </header>
-        
-        <br>
+    </div>
 
-        <main>
-            <section class="resume-section">
-                <div class="resume">
-                    <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume_Page_1.png?v=1741845040" alt="Professional Resume">
-                </div>
-            </section>
+    <!-- Resume Section - Centered -->
+    <div class="resume-section">
+        <div class="resume">
+            <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume_Page_1.png?v=1741845040" alt="Professional Resume">
+        </div>
+    </div>
 
-            <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-                🔙 Back to Portfolio
-            </a>
-        </main>
-<br>
-    </br>
+    <!-- ✅ Centered Back Button ✅ -->
+    <div class="back-button-container">
+        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+            🔙 Back to Portfolio
+        </a>
+    </div>
+
+    <!-- ✅ Centered Footer ✅ -->
+    <div class="footer-container">
         <footer>
             <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
         </footer>
     </div>
+
 </body>
 </html>
+
