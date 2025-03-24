@@ -1,133 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍽️ Projects</title>
     <style>
-      body {
-        background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: left;
-        margin: 0;
-        padding: 50px;
-      }
-      .nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 30px;
-        background: rgba(16,73,133, 0.7);
-        padding: 15px;
-        border-radius: 10px;
-        margin: 0 auto;
-        max-width: 100%;
-        text-align: center;
-      }
-      .nav a {
-        color: #ffffff;
-        text-decoration: underline; 
-        font-size: 18px; 
-        font-weight: bold; 
-        padding: 10px 15px;
-        border-radius: 5px;
-      transition: 0.3s ease;
-      }
-      .nav a:hover {
-        color: #f7f7f7; 
-      }
-    ul {
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        list-style-type: none;
-        padding: 0;
-        text-align: left;
-      }
-      button {
-        display: block;
-        margin: 0 auto;
-      }
-      .profile-photo {
-        width: 160px; 
-        height: 160px; 
-        border-radius: 50%; 
-        border: 3px solid #ffffff; 
-        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); 
-        object-fit: cover; 
-      }
-       h5 {
-        text-align: left;
-        max-width: 100%; 
-        margin: 0 auto; 
-      }
-       p {
-        text-align: left;
-        max-width: 100%; 
-        margin: 0 auto; 
-      }
+        body {
+            background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            font-family: "Arial", sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: left;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .tile {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            text-align: center;
+        }
+
+        .tile h1 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .shrimp {
+            background: #d26500;
+            border: 2px solid #d26500;
+        }
+
+        .shrimp h2 {
+            background-color: #fff;
+            border: 5px solid #de5d17;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 15px;
+            color: #d26500;
+        }
+
+        .roast {
+            background: #0056b3;
+            border: 2px solid #004080;
+        }
+
+        .roast h2 {
+            background-color: #fff;
+            border: 5px solid #004080;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 15px;
+            color: #0056b3;
+        }
+
+        .chipotle {
+            background: #d2ce00;
+            border: 2px solid #004080;
+        }
+
+        .chipotle h2 {
+            background-color: #fff;
+            border: 5px solid #004080;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 15px;
+            color: #0056b3;
+        }
+      
+        .tile img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 22px;
+            margin: 0 auto;
+        }
+
+        .make-button {
+            display: block;
+            margin: 15px auto;
+            background: #fff;
+            font-size: 16px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 200ms ease-in-out;
+            text-decoration: none;
+        }
+
+        .make-button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        } 
+
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .back-button {
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 16px;
+            padding: 12px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #f7f7f7;
+            color: #000000;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        footer p {
+            text-align: center;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%;
+                padding: 10px;
+          
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .tile {
+                width: 90%;
+                max-width: 400px;
+                padding: 12px;
+            }
+
+            .back-button {
+                width: auto;
+            }
+        }
     </style>
-  </head>
-  <body>
-      <h1>Hi, 👋🏽 I'm Nadine!</h1>
-    <br>
-    <img 
-      src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
-      alt="Profile Picture" 
-      class="profile-photo"
-    />
-    <br>
-    <br>
-    <br>
-    <h5>Carpe Facto Advisor at Apple | Product Insights & Technical Specialist | AI & Cloud Computing Enthusiast | Customer-Centric Innovator | Entrepreneur & Brand Builder</h5>
-    <br>
-      <h1>This is my digital portfolio—a space where I share my work in tech, my career journey, and my business ventures.</h1>
-    <br>
-      <p>As a Carpe Facto Advisor at Apple, I analyze product performance, spot trends, and provide insights that help improve engineering, hardware, and software.</p>
-        <br>
-      <p>My work connects real customer experiences to product development, making sure feedback leads to real innovation.</p>
-          <br>
-      <p>Outside of tech, I run Alchemy Body Werks, a plant-based personal care brand rooted in self-care, wellness, and sustainability. 
-        <br>
-      <p>I'm also diving deeper into AI, cloud computing, and coding, sharpening my skills in HTML, CSS, and Python to build seamless, engaging digital experiences.</p>
-    <br>
-      <p>🚀 Always learning, creating, and pushing boundaries. Let’s connect and build something amazing!</p>
-    <br>
-    <br>
-    <ul nav class="nav">
-      <li class="nav_list_items">
-        <a href="https://nadineherrera.github.io/my-portfolio/recipes">
-          Projects
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🍽️ Recipe Cards Project</h1>
+            <p>This project showcases interactive recipe cards that I designed using <strong>HTML, CSS, and JavaScript</strong>.</p>
+            <p>The goal was to create a user-friendly and visually appealing interface where users can explore different recipes with <strong>smooth animations and responsive layouts</strong>.</p>
+            <p>I used <strong>HTML</strong> to structure the recipe cards, <strong>CSS</strong> for styling and layout design, and <strong>JavaScript</strong> to add interactive elements such as dynamic content loading, hover effects, and toggling recipe details.</p>
+            <p>Each card is designed to be <strong>responsive</strong>, ensuring a great user experience across different screen sizes.</p>
+            <p>This project demonstrates my ability to build functional, interactive, and well-styled front-end web applications.</p>
+        </header>
+    </div>
+
+    <div class="tile shrimp">
+        <h1>I ❤️ Shrimp Linguini</h1>
+        <h2>Especially when it's made with <em>Lemon</em> 🍋 and <em>Garlic</em> 🧄</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Shrimp_Linguini.png?v=1741665557" alt="Shrimp Linguini">
+        <p>Shrimp linguini is a classic pasta dish that pairs juicy shrimp with linguini in a flavorful sauce. It's a great dish for a special occasion or a romantic dinner. Quick, easy, and customizable!</p>
+        <a href="https://tasty.co/recipe/one-pot-lemon-garlic-shrimp-pasta" target="_blank">
+            <button class="make-button">👉 Make Shrimp Linguini</button>
         </a>
-      </li>
-      <li class "nav_list_items">
-        <a href="https://nadineherrera.github.io/my-portfolio/education">
-        Education
+    </div>
+
+    <div class="tile roast">
+        <h1>I ❤️ Mississippi Pot Roast</h1>
+        <h2>Made with <em>Chuck Roast</em> 🥩 and <em>Pepperocini Peppers</em> 🌶️</h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/MS_Pot_Roast.png?v=1741671728" alt="Mississippi Pot Roast">
+        <p>Mississippi Pot Roast is a hearty and tangy dish made with five simple ingredients. Serve it alongside mashed potatoes for a cozy and satisfying meal.</p>
+        <a href="https://belleofthekitchen.com/mississippi-pot-roast/" target="_blank">
+            <button class="make-button">👉 Make Mississippi Pot Roast</button>
         </a>
-        </li>
-      <li class="nav_list_items">
-        <a href="https://nadineherrera.github.io/my-portfolio/resume">
-          Resume
+    </div>
+
+    <div class="tile chipotle">
+        <h1>I ❤️ DIY Chipotle Burrito Bowls</h1>
+        <h2>Made with <em>Chickhen</em> 🐓 <em>Guac</em> 🥑 <em>Pico de Gallo 🧅 🍅</em></h2>
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-23_at_8.18.14_PM.png?v=1742775989" alt="DIY Chipotle Burrito Bowl">
+        <p>DIY Chipotle Burrito Bowls are delicious, nutritious, and easy to make. They can be prepared in under 30 minutes and are easily customizable. Making them a perfect meal for a busy weeknight.</p>
+        <a href="https://whatsgabycooking.com/diy-chipotle-burrito-bowl/ target="_blank">
+            <button class="make-button">>👉 Make a DIY Chipotle Burrito Bowl</button>
+      
+    <div class="back-button-container">
+        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+            🔙 Back to Portfolio
         </a>
-        </li>
-      <li class="nav_list_items">
-        <a href="https://alchemybodywerks.com/">
-          Brand Website
-        </a>
-        </li>
-    </ul>
-    </nav>
-    </header>
-    <br>
-    <br>
-    <br>
-          </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
-  </body>
+    </div>
+    
+    <div class="footer-container">
+        <footer>
+            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
 </html>
