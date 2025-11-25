@@ -153,27 +153,55 @@
             margin: 0;
         }
 
+        /* Recipe card (ADDED) */
+        .recipe-card {
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 40px auto 0;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            max-width: 800px;
+        }
+
+        .recipe-card h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .recipe-meta {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .recipe-card ul,
+        .recipe-card ol {
+            margin-left: 20px;
+        }
+
+        .recipe-card li {
+            margin-bottom: 6px;
+        }
+
+        .recipe-note {
+            font-size: 14px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
         @media (max-width: 768px) {
             .container {
                 max-width: 95%;
                 padding: 10px;
-          
-            h1 {
-                text-align: center;
-            }
-
-            p {
-                text-align: left;
             }
 
             .tile {
                 width: 90%;
                 max-width: 400px;
                 padding: 12px;
-            }
-
-            .back-button {
-                width: auto;
             }
         }
     </style>
@@ -206,9 +234,37 @@
         <h3>Made with <em>Chuck Roast</em> 🥩 and <em>Pepperocini Peppers</em> 🌶️</h3>
         <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/MS_Pot_Roast.png?v=1741671728" alt="Mississippi Pot Roast">
         <p>Mississippi Pot Roast is a hearty and tangy dish made with five simple ingredients. Serve it alongside mashed potatoes for a cozy and satisfying meal.</p>
-        <a href="https://belleofthekitchen.com/mississippi-pot-roast/" target="_blank">
+        <a href="#mississippi-pot-roast-recipe">
             <button class="make-button">👉 Make Mississippi Pot Roast</button>
         </a>
+    </div>
+
+    <!-- ADDED RECIPE SECTION -->
+    <div id="mississippi-pot-roast-recipe" class="recipe-card">
+        <h2>Mississippi Pot Roast Recipe</h2>
+        <p class="recipe-meta">Serves 6–8 • Prep Time: 5 minutes • Cook Time: 8+ hours</p>
+
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2–3 lbs chuck roast</li>
+            <li>1 or 2 packets ranch dressing mix</li>
+            <li>1 packet au jus gravy mix</li>
+            <li>6 tablespoons salted butter, sliced</li>
+            <li>1/3 cup juice from jarred pepperoncini peppers</li>
+            <li>6–8 whole pepperoncini peppers (or sliced)</li>
+        </ul>
+
+        <h3>Instructions</h3>
+        <ol>
+            <li>Place the chuck roast directly into the bottom of your crock pot.</li>
+            <li>Sprinkle the ranch dressing mix and au jus gravy mix evenly over the top.</li>
+            <li>Add the sliced butter and the pepperoncini peppers, then pour in the pepperoncini juice.</li>
+            <li>Cover with the lid and cook on <strong>LOW</strong> for 8 hours or longer.</li>
+            <li>At the 6-hour mark, taste the juices and adjust seasoning if needed.</li>
+            <li>Shred the roast once tender and mix into the juices. Serve warm.</li>
+        </ol>
+
+        <p class="recipe-note">Tip: Add extra pepperoncini juice for more tangy flavor.</p>
     </div>
 
     <div class="tile chipotle">
