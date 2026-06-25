@@ -4,117 +4,337 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education & Certifications | Nadine Herrera</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f4f2ee;--surface:#fff;--ink:#0f1520;--ink-mid:#374151;--muted:#6b7280;--gold:#a07828;--rule:#ddd9d0}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-nav{position:fixed;top:0;left:0;right:0;background:rgba(244,242,238,.95);padding:18px 40px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;z-index:100}
-.nav-name{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{text-decoration:none;color:var(--muted);font-size:12px;text-transform:uppercase}
-.hero{padding:160px 24px 80px;text-align:center;max-width:900px;margin:auto}
-.hero h1{font-size:clamp(3rem,7vw,5rem);margin:20px 0}
-.hero-eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-.hero-subtitle{max-width:650px;margin:auto;color:var(--ink-mid)}
-.section{max-width:1000px;margin:auto;padding:0 24px 80px}
-.label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:30px;border-bottom:1px solid var(--rule);padding-bottom:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:24px}
-.card h3{margin-bottom:8px}
-.card p{color:var(--muted)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.gallery img{width:100%;border-radius:10px;border:1px solid var(--rule)}
-.btn{text-decoration:none;background:var(--gold);color:#fff;padding:12px 24px;border-radius:4px}
-.center{text-align:center}footer{
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#f4f2ee;
+    --surface:#ffffff;
+    --ink:#0f1520;
+    --ink-mid:#374151;
+    --muted:#6b7280;
+    --gold:#a07828;
+    --rule:#ddd9d0;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.7;
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:rgba(244,242,238,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+    padding:18px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.nav-name{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:24px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--muted);
+    font-size:12px;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+/* Hero */
+
+.hero{
+    padding:160px 24px 80px;
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.hero-eyebrow{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(3rem,7vw,5rem);
+    line-height:1.1;
+    margin:20px 0;
+}
+
+.hero-subtitle{
+    max-width:650px;
+    margin:auto;
+    color:var(--ink-mid);
+}
+
+/* Sections */
+
+.section{
+    max-width:1000px;
+    margin:auto;
+    padding:0 24px 80px;
+}
+
+.label{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold);
+
+    margin-bottom:30px;
+    padding-bottom:10px;
+
+    border-bottom:1px solid var(--rule);
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.card{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:24px;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    border:1px solid var(--rule);
+    display:block;
+}
+
+/* Buttons */
+
+.back-section{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+
+    background:var(--gold);
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:4px;
+
+    transition:.3s ease;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+/* Footer */
+
+footer{
+    max-width:1200px;
+    margin:80px auto 0;
+
     border-top:1px solid var(--rule);
 
-    padding:30px 40px;
+    padding:30px 24px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
-
-    margin-top:80px;
+    gap:12px;
 }
 
 footer p{
     color:var(--muted);
-    font-size:11px;
+    font-size:12px;
+    margin:0;
 }
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    nav{
+        padding:16px 20px;
+    }
+
+    .nav-links{
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
 </style>
 </head>
+
 <body>
+
 <nav>
-<span class="nav-name">Nadine Herrera</span>
-<ul class="nav-links">
-<li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
-<li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
-<li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
-<li><a href="https://alchemybodywerks.com/" target="_blank">Alchemy</a></li>
-</ul>
+    <span class="nav-name">Nadine Herrera</span>
+
+    <ul class="nav-links">
+        <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
+        <li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
+        <li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
+        <li><a href="https://alchemybodywerks.com/" target="_blank">Alchemy</a></li>
+    </ul>
 </nav>
 
 <section class="hero">
-<p class="hero-eyebrow">Education</p>
-<h1>Education & Certifications</h1>
-<p class="hero-subtitle">Formal education, industry certifications, and continuous learning supporting my transition into cybersecurity, IT operations, systems administration, and security-focused roles.</p>
+    <p class="hero-eyebrow">Education</p>
+
+    <h1>Education & Certifications</h1>
+
+    <p class="hero-subtitle">
+        Formal education, industry certifications, and continuous learning supporting my transition into cybersecurity, IT operations, systems administration, and security-focused roles.
+    </p>
 </section>
 
 <section class="section">
-<div class="label">Technical Skills & Learning Areas</div>
-<div class="grid">
-<div class="card"><h3>IT Support</h3></div>
-<div class="card"><h3>Systems Administration</h3></div>
-<div class="card"><h3>Cybersecurity Fundamentals</h3></div>
-<div class="card"><h3>SOC Concepts</h3></div>
-<div class="card"><h3>GRC</h3></div>
-<div class="card"><h3>Cloud Security</h3></div>
-</div>
+    <div class="label">Technical Skills & Learning Areas</div>
+
+    <div class="grid">
+        <div class="card"><h3>IT Support</h3></div>
+        <div class="card"><h3>Systems Administration</h3></div>
+        <div class="card"><h3>Cybersecurity Fundamentals</h3></div>
+        <div class="card"><h3>SOC Concepts</h3></div>
+        <div class="card"><h3>GRC</h3></div>
+        <div class="card"><h3>Cloud Security</h3></div>
+    </div>
 </section>
 
 <section class="section">
-<div class="label">Formal Education</div>
-<div class="grid">
-<div class="card"><h3>MBA</h3><p>Product Management</p></div>
-<div class="card"><h3>Bachelor of Science</h3><p>Marketing with Digital Marketing Specialization</p></div>
-<div class="card"><h3>Associate of Arts</h3><p>General Studies</p></div>
-</div>
+    <div class="label">Formal Education</div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>MBA</h3>
+            <p>Product Management</p>
+        </div>
+
+        <div class="card">
+            <h3>Bachelor of Science</h3>
+            <p>Marketing with Digital Marketing Specialization</p>
+        </div>
+
+        <div class="card">
+            <h3>Associate of Arts</h3>
+            <p>General Studies</p>
+        </div>
+    </div>
 </section>
 
 <section class="section">
-<div class="label">Certifications</div>
-<div class="grid">
-<div class="card"><h3>Google Cybersecurity Professional Certificate</h3></div>
-<div class="card"><h3>CompTIA A+</h3></div>
-<div class="card"><h3>Google AI Essentials</h3></div>
-<div class="card"><h3>CompTIA Security+ (In Progress)</h3></div>
-</div>
+    <div class="label">Certifications</div>
+
+    <div class="grid">
+        <div class="card"><h3>Google Cybersecurity Professional Certificate</h3></div>
+        <div class="card"><h3>CompTIA A+</h3></div>
+        <div class="card"><h3>Google AI Essentials</h3></div>
+        <div class="card"><h3>CompTIA Security+ (In Progress)</h3></div>
+    </div>
 </section>
 
 <section class="section">
-<div class="label">Credentials Gallery</div>
-<div class="gallery">
-<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_11.04.02_PM.png?v=1782356658">
-<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008">
-<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125">
-<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129">
-<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_10.52.34_PM.png?v=1782356180">
-<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_10.53.45_PM.png?v=1782356180">
-</div>
+    <div class="label">Credentials Gallery</div>
+
+    <div class="gallery">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_11.04.02_PM.png?v=1782356658" alt="MBA">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008" alt="Bachelor Degree">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125" alt="Associate Degree">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129" alt="CompTIA A+">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_10.52.34_PM.png?v=1782356180" alt="Google AI Essentials">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_10.53.45_PM.png?v=1782356180" alt="Google Cybersecurity">
+    </div>
 </section>
 
-<section class="section center">
-<a class="btn" href="https://nadineherrera.github.io/my-portfolio/">Back to Portfolio</a>
+<section class="back-section">
+    <a class="btn" href="https://nadineherrera.github.io/my-portfolio/">
+        Back to Portfolio
+    </a>
 </section>
 
-<footer>
 <footer>
     <p>© 2026 Nadine Herrera · All Rights Reserved</p>
     <p>Atlanta, GA · Open to Remote Cybersecurity Roles</p>
 </footer>
+
 </body>
 </html>
