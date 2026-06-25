@@ -116,13 +116,19 @@ letter-spacing:.08em;
 }
 .center{text-align:center}
 footer{
-border-top:1px solid var(--rule);
-padding:30px 40px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
+  border-top:1px solid var(--rule);
+  padding:30px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
 }
-footer p{font-size:11px;color:var(--muted)}
+
+footer p{
+  font-size:11px;
+  color:var(--muted);
+}
 @media(max-width:768px){
 
   nav{
