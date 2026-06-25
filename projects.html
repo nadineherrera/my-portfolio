@@ -3,373 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Front-End Development Projects</title>
-
+<title>Front-End Development Projects | Nadine Herrera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-* {
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#f4f2ee;
+--surface:#ffffff;
+--ink:#0f1520;
+--ink-mid:#374151;
+--muted:#6b7280;
+--gold:#a07828;
+--gold-lt:#c9a84c;
+--rule:#ddd9d0;
 }
-
-body {
-    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-
-    margin: 0;
-    padding: 20px;
-
-    min-height: 100vh;
-    text-align: center;
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+nav{
+position:fixed;top:0;left:0;right:0;z-index:100;
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 40px;background:rgba(244,242,238,.95);
+border-bottom:1px solid var(--rule);
 }
-
-/* Intro Section */
-
-.container {
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    padding: 30px;
-
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border-radius: 12px;
+.nav-name{
+font-size:13px;font-weight:700;letter-spacing:.1em;
+text-transform:uppercase;color:var(--gold);
 }
-
-.container p {
-    text-align: left;
-    line-height: 1.8;
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{
+text-decoration:none;color:var(--muted);
+font-size:12px;text-transform:uppercase;
+letter-spacing:.08em;
 }
-
-.container ul {
-    text-align: left;
-    line-height: 1.8;
+.hero{
+padding:160px 24px 90px;
+max-width:900px;
+margin:auto;
+text-align:center;
 }
-
-.container li {
-    margin-bottom: 8px;
+.hero-eyebrow{
+font-size:11px;font-weight:700;
+letter-spacing:.22em;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:20px;
 }
-
-h1 {
-    margin-bottom: 25px;
+.hero h1{
+font-size:clamp(3rem,7vw,5rem);
+font-weight:800;
+margin-bottom:24px;
 }
-
-/* Project Cards */
-
-.tile {
-    width: 100%;
-    max-width: 700px;
-
-    margin: 40px auto;
-    padding: 25px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.25);
-
-    color: #ffffff;
-    text-align: center;
+.hero-subtitle{
+max-width:700px;
+margin:auto;
+color:var(--ink-mid);
 }
-
-.tile img {
-    width: 100%;
-    height: auto;
-
-    border-radius: 15px;
-    margin-top: 15px;
+.section{
+max-width:1050px;
+margin:auto;
+padding:0 24px 80px;
 }
-
-.tile p {
-    text-align: left;
-    line-height: 1.7;
+.label{
+font-size:10px;
+font-weight:700;
+letter-spacing:.22em;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:35px;
+padding-bottom:10px;
+border-bottom:1px solid var(--rule);
 }
-
-/* Shrimp Card */
-
-.shrimp {
-    background: #d26500;
+.skills-grid,.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
-
-.shrimp h3 {
-    background: #ffffff;
-    color: #d26500;
-
-    border-radius: 12px;
-    padding: 12px;
-
-    border: 4px solid #d26500;
+.card{
+background:#fff;
+border:1px solid var(--rule);
+border-radius:10px;
+padding:26px;
 }
-
-/* Roast Card */
-
-.roast {
-    background: #0056b3;
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-mid)}
+.project-card img{
+width:100%;
+border-radius:8px;
+margin-bottom:16px;
+border:1px solid var(--rule);
 }
-
-.roast h3 {
-    background: #ffffff;
-    color: #0056b3;
-
-    border-radius: 12px;
-    padding: 12px;
-
-    border: 4px solid #0056b3;
+.project-num{
+font-size:10px;
+font-weight:700;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:8px;
 }
-
-/* Chipotle Card */
-
-.chipotle {
-    background: #F7B13F;
+.btn{
+display:inline-block;
+margin-top:16px;
+padding:12px 22px;
+background:var(--gold);
+color:white;
+text-decoration:none;
+border-radius:4px;
+font-size:12px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.08em;
 }
-
-.chipotle h3 {
-    background: #ffffff;
-    color: #0056b3;
-
-    border-radius: 12px;
-    padding: 12px;
-
-    border: 4px solid #F7B13F;
+.center{text-align:center}
+footer{
+border-top:1px solid var(--rule);
+padding:30px 40px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
 }
-
-/* Buttons */
-
-.make-button {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    background: #ffffff;
-    color: #000000;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    padding: 12px 20px;
-
-    border: none;
-    border-radius: 8px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,.25);
-
-    transition: all .3s ease;
+footer p{font-size:11px;color:var(--muted)}
+@media(max-width:768px){
+nav{padding:16px 20px}
+.nav-links{gap:14px}
+footer{flex-direction:column}
 }
-
-.make-button:hover {
-    transform: translateY(-2px);
-    cursor: pointer;
-}
-
-.back-button-container {
-    margin-top: 60px;
-}
-
-.back-button {
-    background: #ffffff;
-    color: #000000;
-
-    padding: 12px 20px;
-
-    text-decoration: none;
-    border-radius: 8px;
-
-    font-weight: bold;
-
-    transition: all .3s ease;
-}
-
-.back-button:hover {
-    background: #f5f5f5;
-}
-
-/* Footer */
-
-.footer-container {
-    margin-top: 60px;
-}
-
-footer p {
-    text-align: center;
-    font-size: 14px;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    body {
-        padding: 15px;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .tile {
-        padding: 20px;
-    }
-
-    .tile h1 {
-        font-size: 1.4rem;
-    }
-
-    .make-button,
-    .back-button {
-        width: 100%;
-        max-width: 280px;
-        display: inline-block;
-    }
-}
-
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<nav>
+<span class="nav-name">Nadine Herrera</span>
+<ul class="nav-links">
+<li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
+<li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
+<li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
+<li><a href="https://alchemybodywerks.com/" target="_blank">Alchemy</a></li>
+</ul>
+</nav>
 
-    <h1>Front-End Development Projects</h1>
+<section class="hero">
+<p class="hero-eyebrow">Projects</p>
+<h1>Front-End Development Projects</h1>
+<p class="hero-subtitle">
+These projects were built using HTML, CSS, and JavaScript to strengthen my front-end development skills, responsive design knowledge, and understanding of modern web development practices.
+</p>
+</section>
 
-    <p>
-        These projects were built using HTML, CSS, and JavaScript to strengthen
-        my front-end development skills and understanding of responsive web design.
-    </p>
+<section class="section">
+<div class="label">Skills Demonstrated</div>
+<div class="skills-grid">
+<div class="card"><h3>Responsive Web Design</h3></div>
+<div class="card"><h3>HTML Semantic Structure</h3></div>
+<div class="card"><h3>CSS Layouts & Styling</h3></div>
+<div class="card"><h3>JavaScript Interactivity</h3></div>
+<div class="card"><h3>User Interface Design</h3></div>
+<div class="card"><h3>GitHub Pages Deployment</h3></div>
+</div>
+</section>
 
-    <p>
-        Through these projects, I practiced creating structured page layouts,
-        implementing interactive user experiences, styling components,
-        and designing interfaces that adapt across desktop and mobile devices.
-    </p>
+<section class="section">
+<div class="label">Project Portfolio</div>
 
-    <p><strong>Skills Demonstrated:</strong></p>
+<div class="projects-grid">
 
-    <ul>
-        <li>Responsive Web Design</li>
-        <li>HTML Semantic Structure</li>
-        <li>CSS Layouts and Styling</li>
-        <li>JavaScript Interactivity</li>
-        <li>User Interface Design</li>
-        <li>Problem Solving and Debugging</li>
-        <li>GitHub Pages Deployment</li>
-    </ul>
-
-    <p>
-        While these projects focus on front-end development, they also reflect
-        the troubleshooting mindset, attention to detail, and systems thinking
-        that support my transition into cybersecurity and technology-focused roles.
-    </p>
-
+<div class="card project-card">
+<div class="project-num">Project 01</div>
+<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Shrimp_Linguini.png?v=1741665557">
+<h3>Shrimp Linguini Recipe Site</h3>
+<p>
+Demonstrates responsive layouts, semantic HTML structure, image handling,
+CSS styling, and mobile-friendly design principles.
+</p>
+<a class="btn" href="https://nadineherrera.github.io/my-portfolio/shrimplinguine.html" target="_blank">View Project</a>
 </div>
 
-<!-- SHRIMP -->
-
-<div class="tile shrimp">
-    <h1>I ❤️ Shrimp Linguini</h1>
-
-    <h3>
-        Especially when it's made with <em>Lemon</em> 🍋 and
-        <em>Garlic</em> 🧄
-    </h3>
-
-    <img
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Shrimp_Linguini.png?v=1741665557"
-        alt="Shrimp Linguini"
-    >
-
-    <p>
-        This project demonstrates responsive layouts, CSS styling,
-        image handling, semantic HTML structure, and interactive page
-        design through a recipe-focused user experience.
-    </p>
-
-    <a href="https://nadineherrera.github.io/my-portfolio/shrimplinguine.html" target="_blank">
-        <button class="make-button">
-            👉 View Project
-        </button>
-    </a>
+<div class="card project-card">
+<div class="project-num">Project 02</div>
+<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/MS_Pot_Roast.png?v=1741671728">
+<h3>Mississippi Pot Roast Site</h3>
+<p>
+Focuses on content organization, responsive design,
+modern HTML structure, and user-focused interface styling.
+</p>
+<a class="btn" href="https://nadineherrera.github.io/my-portfolio/msroastrecipe.html" target="_blank">View Project</a>
 </div>
 
-<!-- ROAST -->
-
-<div class="tile roast">
-    <h1>I ❤️ Mississippi Pot Roast</h1>
-
-    <h3>
-        Made with <em>Chuck Roast</em> 🥩 and
-        <em>Pepperoncini Peppers</em> 🌶️
-    </h3>
-
-    <img
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/MS_Pot_Roast.png?v=1741671728"
-        alt="Mississippi Pot Roast"
-    >
-
-    <p>
-        This project focuses on content presentation, responsive design,
-        user interface styling, and creating an engaging experience using
-        modern HTML and CSS techniques.
-    </p>
-
-    <a href="https://nadineherrera.github.io/my-portfolio/msroastrecipe.html" target="_blank">
-        <button class="make-button">
-            👉 View Project
-        </button>
-    </a>
+<div class="card project-card">
+<div class="project-num">Project 03</div>
+<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-23_at_8.18.14_PM.png?v=1742775989">
+<h3>DIY Chipotle Burrito Bowl</h3>
+<p>
+Highlights visual design, content presentation,
+responsive layouts, and front-end development best practices.
+</p>
+<a class="btn" href="https://whatsgabycooking.com/diy-chipotle-burrito-bowl/" target="_blank">View Project</a>
 </div>
 
-<!-- CHIPOTLE -->
-
-<div class="tile chipotle">
-    <h1>I ❤️ DIY Chipotle Burrito Bowls</h1>
-
-    <h3>
-        Made with <em>Chicken</em> 🐓
-        <em>Guac</em> 🥑
-        <em>Pico de Gallo</em> 🍅
-    </h3>
-
-    <img
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-23_at_8.18.14_PM.png?v=1742775989"
-        alt="DIY Chipotle Burrito Bowl"
-    >
-
-    <p>
-        This project highlights responsive layouts, visual design,
-        content organization, and user-focused development practices
-        for web-based applications.
-    </p>
-
-    <a href="https://whatsgabycooking.com/diy-chipotle-burrito-bowl/" target="_blank">
-        <button class="make-button">
-            👉 View Project
-        </button>
-    </a>
 </div>
+</section>
 
-<!-- BACK BUTTON -->
+<section class="section center">
+<a class="btn" href="https://nadineherrera.github.io/my-portfolio/">Back to Portfolio</a>
+</section>
 
-<div class="back-button-container">
-    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-        ← Back to Portfolio
-    </a>
-</div>
-
-<!-- FOOTER -->
-
-<div class="footer-container">
-    <footer>
-        <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
-</div>
+<footer>
+<p>© 2026 Nadine Herrera · All Rights Reserved</p>
+<p>Atlanta, GA · Open to Remote Cybersecurity Roles</p>
+</footer>
 
 </body>
 </html>
