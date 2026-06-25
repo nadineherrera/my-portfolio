@@ -1,334 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nadine Herrera — Cybersecurity & Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
+    :root {
+      --bg:         #f4f2ee;
+      --surface:    #ffffff;
+      --surface2:   #eceae5;
+      --ink:        #0f1520;
+      --ink-mid:    #374151;
+      --muted:      #6b7280;
+      --gold:       #a07828;
+      --gold-lt:    #c9a84c;
+      --rule:       #ddd9d0;
+      --rule-dark:  #c5bfb3;
+    }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-
-    margin: 0;
-    padding: 20px;
-    min-height: 100vh;
-
-    text-align: center;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* HERO */
-
-.hero-title {
-    font-size: 2.2rem;
-    margin-top: 10px;
-    margin-bottom: 25px;
-}
-
-.profile-photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 30px auto;
-
-    box-shadow: 0 6px 18px rgba(255,255,255,0.25);
-}
-
-.page-title {
-    font-size: 3rem;
-    line-height: 1.25;
-    margin-bottom: 40px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* CONTENT CARD */
-
-.content {
-    max-width: 850px;
-    margin: 0 auto;
-
-    padding: 35px;
-
-    text-align: left;
-    line-height: 1.9;
-
-    background: rgba(0, 0, 0, 0.35);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border-radius: 16px;
-}
-
-.content p {
-    margin-bottom: 22px;
-}
-
-.section {
-    margin-bottom: 45px;
-}
-
-.section:last-child {
-    margin-bottom: 0;
-}
-
-/* NAVIGATION */
-
-nav {
-    margin-top: 60px;
-}
-
-.nav-menu {
-    list-style: none;
-
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 15px;
-}
-
-.nav-menu li a {
-    display: inline-block;
-
-    text-decoration: none;
-
-    padding: 14px 22px;
-
-    background: rgba(16, 73, 133, 0.95);
-
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-
-    border-radius: 8px;
-
-    transition: all .3s ease;
-}
-
-.nav-menu li a:hover {
-    background: rgba(255,255,255,.20);
-    transform: translateY(-2px);
-}
-
-/* FOOTER */
-
-footer {
-    margin-top: 70px;
-    padding-bottom: 20px;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
+    html { scroll-behavior: smooth; }
 
     body {
-        padding: 15px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(244, 242, 238, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-name {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .hero-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--rule-dark);
+      margin-bottom: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .hero h1 .first { color: var(--ink); }
+    .hero h1 .last  { color: var(--gold); }
 
     .hero-title {
-        font-size: 2rem;
-        margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .profile-photo {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 25px;
+    .dot {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--gold-lt);
+      display: inline-block;
+      flex-shrink: 0;
     }
 
-    .page-title {
-        font-size: 2.3rem;
-        line-height: 1.3;
-        margin-bottom: 30px;
+    .hero-narrative {
+      max-width: 620px;
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 36px 40px;
+      margin-bottom: 40px;
     }
 
-    .content {
-        max-width: 100%;
-
-        padding: 30px 25px;
-
-        border-radius: 16px;
+    .hero-narrative p {
+      font-size: 0.97rem;
+      color: var(--ink-mid);
+      line-height: 1.85;
+      margin-bottom: 18px;
     }
 
-    .content p {
-        font-size: 1.1rem;
-        line-height: 1.8;
+    .hero-narrative p:last-child { margin-bottom: 0; }
+
+    .hero-narrative strong {
+      color: var(--ink);
+      font-weight: 600;
     }
 
-    .section {
-        margin-bottom: 45px;
+    .hero-positioning {
+      max-width: 560px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 36px;
+      line-height: 1.7;
     }
 
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+    .hero-positioning span { color: var(--gold); }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .nav-menu li a {
-        width: 280px;
-        text-align: center;
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.18s;
+    }
+    .btn-primary { background: var(--gold); color: #fff; }
+    .btn-primary:hover {
+      background: var(--gold-lt);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(160,120,40,0.22);
+    }
+    .btn-ghost {
+      border: 1.5px solid var(--rule-dark);
+      color: var(--muted);
+      background: transparent;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── SECTION WRAPPER ── */
+    .section-wrap {
+      padding: 80px 24px;
+      max-width: 880px;
+      margin: 0 auto;
     }
 
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── EXPERIENCE ── */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0 48px;
+      align-items: start;
+    }
+
+    .exp-divider {
+      background: var(--rule);
+      width: 1px;
+      align-self: stretch;
+    }
+
+    .exp-source {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-bottom: 12px;
+    }
+
+    .exp-block h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .exp-block p {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.85;
+    }
+
+    .exp-block p + p { margin-top: 12px; }
+    .exp-block strong { color: var(--ink); font-weight: 600; }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+      background: var(--surface2);
+      color: var(--muted);
+      border: 1px solid var(--rule);
+    }
+
+    /* ── SECURITY THINKING IN PRACTICE ── */
+    .stories-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .story-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 28px 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(to right, var(--gold), var(--gold-lt));
+    }
+
+    .story-domain {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .story-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .story-card p {
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .story-reflection {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      font-style: italic;
+    }
+
+    .story-card-wide { grid-column: 1 / -1; }
+
+    /* ── STARR METHOD ── */
+    .starr-section {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .starr-header {
+      padding: 34px 40px 22px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .starr-header h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+
+    .starr-header p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 580px;
+    }
+
+    .starr-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .starr-step {
+      padding: 22px 18px;
+      border-right: 1px solid var(--rule);
+    }
+    .starr-step:last-child { border-right: none; }
+
+    .starr-letter {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .starr-word {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .starr-desc {
+      font-size: 0.77rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── EXPLORE CARDS ── */
+    .portfolio-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+    }
+
+    .nav-card {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding: 26px 22px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+    }
+    .nav-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .nav-card-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+    }
+
+    .nav-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-card-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ── FOOTER ── */
     footer {
-        margin-top: 50px;
+      border-top: 1px solid var(--rule);
+      padding: 28px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-}
 
-</style>
+    footer p {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { gap: 16px; }
+      .hero-narrative { padding: 26px 22px; }
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .exp-divider { display: none; }
+      .stories-grid { grid-template-columns: 1fr; }
+      .story-card-wide { grid-column: auto; }
+      .starr-steps { grid-template-columns: 1fr 1fr; }
+      .starr-step:nth-child(2n) { border-right: none; }
+      .starr-step { border-bottom: 1px solid var(--rule); }
+      .starr-step:last-child { border-bottom: none; }
+      .starr-header { padding: 26px 22px 18px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <!-- NAV -->
+  <nav>
+    <span class="nav-name">Nadine Herrera</span>
+    <ul class="nav-links">
+      <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
+      <li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
+      <li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
+      <li><a href="https://alchemybodywerks.com/" target="_blank" rel="noopener">Alchemy</a></li>
+    </ul>
+  </nav>
 
-    <!-- HERO -->
-
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-eyebrow">Portfolio</p>
+    <img
+      class="hero-photo"
+      src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577"
+      alt="Nadine Herrera"
+    />
+    <h1>
+      <span class="first">Nadine</span><br />
+      <span class="last">Herrera</span>
+    </h1>
     <p class="hero-title">
-        Hi, 👋🏽 I'm Nadine
+      <span>Technical Investigations</span>
+      <span class="dot"></span>
+      <span>Operational Risk</span>
+      <span class="dot"></span>
+      <span>Systems Thinking</span>
     </p>
 
-    <img
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747"
-        alt="Profile Picture"
-        class="profile-photo"
-    >
-
-    <h3 class="page-title">
-    Cybersecurity Analyst<br>
-    SOC • GRC • Cloud Security
-</h3>
-
-    <!-- CONTENT -->
-
-    <div class="content">
-
-        <div class="section">
-            <p>
-                I am a technology professional transitioning into cybersecurity,
-                with a focus on SOC analysis, GRC, and cloud security.
-            </p>
-
-            <p>
-                My experience combines Apple customer support, e-commerce
-                operations, and systems thinking to understand how digital
-                environments behave and where risk can emerge.
-            </p>
-        </div>
-
-        <div class="section">
-            <p><strong>Apple – Technical Investigations Advisor</strong></p>
-
-            <p>
-                I support customers by troubleshooting technical issues and
-                translating complex system behavior into clear, human-readable
-                explanations. This has strengthened my ability to communicate
-                technical concepts and recognize system-level patterns.
-            </p>
-        </div>
-
-        <div class="section">
-            <p><strong>E-Commerce Business Owner</strong></p>
-
-            <p>
-                I manage operations, customer experience, and digital systems
-                for my brand. This includes monitoring transactions,
-                identifying irregular behavior patterns, and understanding
-                operational risk in real-world environments.
-            </p>
-        </div>
-
-        <div class="section">
-            <p><strong>Problem-Solving Approach (STARR-Inspired)</strong></p>
-
-            <p>
-                I approach problems by assessing system behavior,
-                identifying contributing factors, taking structured action,
-                and reflecting on outcomes to improve future decisions.
-                This approach is applied across both Apple support and
-                business operations.
-            </p>
-        </div>
-
-        <div class="section">
-            <p>
-                This portfolio highlights my front-end development projects,
-                certifications, e-commerce business experience, and progression
-                into cybersecurity and systems-focused roles.
-            </p>
-        </div>
-
+    <div class="hero-narrative">
+      <p>
+        I currently work in technical investigations at Apple, where I help customers understand how
+        devices and software behave in real-world use — and communicate that clearly when things go wrong.
+        Alongside that, I've been running an e-commerce business for several years, managing a live digital
+        system end-to-end, from customer experience to operational risk.
+      </p>
+      <p>
+        Over time I noticed something: I naturally think in <strong>patterns and systems</strong>.
+        Whether it was identifying unusual account activity in my store, improving how technical
+        information was communicated to customers, or reducing friction in how processes operate —
+        I kept finding myself focused on what was happening beneath the surface.
+      </p>
+      <p>
+        That's what led me toward cybersecurity. I want to build on this systems thinking to work
+        more directly with <strong>risk, security operations, and protecting digital environments</strong>.
+      </p>
     </div>
 
-    <!-- NAVIGATION -->
+    <p class="hero-positioning">
+      A <span>systems-focused professional</span> with strengths in technical communication,
+      operational risk awareness, and real-world system behavior analysis —
+      transitioning into <span>cybersecurity and cloud security roles</span>.
+    </p>
 
-    <nav>
+    <div class="hero-cta">
+      <a href="https://nadineherrera.github.io/my-portfolio/resume" class="btn btn-primary">View Resume</a>
+      <a href="https://nadineherrera.github.io/my-portfolio/projects" class="btn btn-ghost">See Projects</a>
+    </div>
+  </div>
 
-        <ul class="nav-menu">
+  <!-- EXPERIENCE -->
+  <div class="section-wrap">
+    <p class="section-label">Where I've Operated</p>
+    <div class="experience-grid">
 
-            <li>
-                <a href="https://nadineherrera.github.io/my-portfolio/projects">
-                    Front-End Development Projects
-                </a>
-            </li>
+      <div class="exp-block">
+        <p class="exp-source">Apple · 9 Years</p>
+        <h3>Technical Investigations Advisor</h3>
+        <p>
+          I investigate complex system-level issues and translate technical behavior into
+          <strong>clear, human-readable explanations</strong> — for customers and cross-functional teams.
+          This sharpened my ability to recognize anomalous patterns, trace root causes,
+          and communicate findings with precision.
+        </p>
+        <p>
+          In that context I also helped customers understand real security risks:
+          malware exposure, vulnerability windows from outdated software, and how attackers
+          target unpatched systems. These are security skills, operating inside a support role.
+        </p>
+        <div class="exp-tags">
+          <span class="tag">Root-cause analysis</span>
+          <span class="tag">Incident communication</span>
+          <span class="tag">Pattern recognition</span>
+          <span class="tag">Threat awareness</span>
+        </div>
+      </div>
 
-            <li>
-                <a href="https://nadineherrera.github.io/my-portfolio/education">
-                    Education & Certifications
-                </a>
-            </li>
+      <div class="exp-divider"></div>
 
-            <li>
-                <a href="https://nadineherrera.github.io/my-portfolio/resume">
-                    Resume & Experience
-                </a>
-            </li>
+      <div class="exp-block">
+        <p class="exp-source">Alchemy Body Werks · Founder</p>
+        <h3>E-Commerce Operator &amp; Risk Owner</h3>
+        <p>
+          I built and run a live digital business — which means I own
+          <strong>transaction monitoring, access management, and operational risk</strong>
+          without a security team behind me.
+        </p>
+        <p>
+          I also continuously reviewed public-facing product content, labeling language, and
+          digital footprint for clarity and compliance risk — becoming aware early on that
+          external perception and digital presence carry their own exposure, not just internal systems.
+        </p>
+        <div class="exp-tags">
+          <span class="tag">Anomaly detection</span>
+          <span class="tag">Platform controls</span>
+          <span class="tag">GRC thinking</span>
+          <span class="tag">Digital footprint risk</span>
+        </div>
+      </div>
 
-            <li>
-                <a href="https://alchemybodywerks.com/">
-                    E-Commerce Business & Operations
-                </a>
-            </li>
+    </div>
+  </div>
 
-        </ul>
+  <!-- SECURITY THINKING IN PRACTICE -->
+  <div class="section-wrap" style="padding-top: 0;">
+    <p class="section-label">Security Thinking in Practice</p>
+    <div class="stories-grid">
 
-    </nav>
+      <div class="story-card">
+        <p class="story-domain">Behavioral Risk · Incident Response</p>
+        <h4>Identifying Coordinated Abuse in a Live System</h4>
+        <p>
+          Noticed multiple accounts using different emails but identical shipping addresses,
+          followed by repeated low-value orders. Analyzed the pattern, identified it as likely
+          coordinated behavior, and implemented platform controls to restrict repeat address reuse.
+          Monitored whether activity continued post-change.
+        </p>
+        <p class="story-reflection">
+          This shifted how I think — away from individual transactions and toward system-wide
+          behavior and intent. Pattern recognition as a security discipline, not just an operational one.
+        </p>
+      </div>
 
-    <!-- FOOTER -->
+      <div class="story-card">
+        <p class="story-domain">Threat Thinking · Anomaly Detection</p>
+        <h4>Distinguishing Legitimate Users from Coordinated Activity</h4>
+        <p>
+          Observed non-standard purchasing behavior across multiple accounts. Compared behavioral
+          signals — timing, frequency, address overlap — to determine whether this was isolated
+          or systemic. Identified repeated patterns consistent with automated or coordinated activity.
+        </p>
+        <p class="story-reflection">
+          I started thinking less like a store owner and more like a systems analyst —
+          focused on patterns, intent, and behavior at scale rather than individual events.
+        </p>
+      </div>
 
-    <footer>
-        <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
+      <div class="story-card story-card-wide">
+        <p class="story-domain">GRC · OSINT Thinking · Digital Footprint Risk</p>
+        <h4>Compliance, Labeling, and External Exposure Awareness</h4>
+        <p>
+          From early on in building my brand, I paid attention to how product descriptions,
+          labeling language, and online presentation could carry compliance and perception risk
+          for personal care products. When an external PR message surfaced broader trends in
+          clean skincare labeling, I used it as a prompt to scan my own website and digital
+          presence — reviewing wording, consistency, and potential areas of ambiguity across
+          all public-facing content.
+        </p>
+        <p>
+          This led to ongoing refinements in how products were described and how the brand
+          appeared externally, building a more structured approach to reviewing public-facing
+          information for risk exposure.
+        </p>
+        <p class="story-reflection">
+          Risk isn't only internal. External perception, language, and digital footprint
+          carry their own exposure — and monitoring them requires the same rigor as internal controls.
+          This is where my GRC and OSINT thinking began.
+        </p>
+      </div>
 
-</div>
+    </div>
+  </div>
+
+  <!-- STARR METHOD -->
+  <div class="section-wrap" style="padding-top: 0;">
+    <p class="section-label">How I Think</p>
+    <div class="starr-section">
+      <div class="starr-header">
+        <h3>The STARR Method — Structured by design, not by habit</h3>
+        <p>
+          Every problem I work through — whether a customer escalation at Apple or a
+          security scenario in my business — follows this same framework.
+          The final R is the one most skip: without Reflection,
+          you're set up to solve the same problem twice.
+        </p>
+      </div>
+      <div class="starr-steps">
+        <div class="starr-step">
+          <div class="starr-letter">S</div>
+          <div class="starr-word">Situation</div>
+          <div class="starr-desc">Understand the full context before drawing conclusions</div>
+        </div>
+        <div class="starr-step">
+          <div class="starr-letter">T</div>
+          <div class="starr-word">Task</div>
+          <div class="starr-desc">Define the specific responsibility or problem to solve</div>
+        </div>
+        <div class="starr-step">
+          <div class="starr-letter">A</div>
+          <div class="starr-word">Action</div>
+          <div class="starr-desc">Take structured, intentional steps toward resolution</div>
+        </div>
+        <div class="starr-step">
+          <div class="starr-letter">R</div>
+          <div class="starr-word">Result</div>
+          <div class="starr-desc">Document the outcome and its measurable impact</div>
+        </div>
+        <div class="starr-step">
+          <div class="starr-letter">R</div>
+          <div class="starr-word">Reflection</div>
+          <div class="starr-desc">Close the loop — what was learned, what changes next time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPLORE -->
+  <div class="section-wrap" style="padding-top: 0;">
+    <p class="section-label">Explore</p>
+    <div class="portfolio-nav">
+      <a href="https://nadineherrera.github.io/my-portfolio/projects" class="nav-card">
+        <span class="nav-card-num">01</span>
+        <span class="nav-card-title">Dev Projects</span>
+        <span class="nav-card-desc">Front-end work built with HTML, CSS &amp; JavaScript</span>
+      </a>
+      <a href="https://nadineherrera.github.io/my-portfolio/education" class="nav-card">
+        <span class="nav-card-num">02</span>
+        <span class="nav-card-title">Education &amp; Certs</span>
+        <span class="nav-card-desc">Google Cybersecurity Certificate, CompTIA A+ &amp; Security+</span>
+      </a>
+      <a href="https://nadineherrera.github.io/my-portfolio/resume" class="nav-card">
+        <span class="nav-card-num">03</span>
+        <span class="nav-card-title">Resume</span>
+        <span class="nav-card-desc">Full experience, skills, and professional background</span>
+      </a>
+      <a href="https://alchemybodywerks.com/" target="_blank" rel="noopener" class="nav-card">
+        <span class="nav-card-num">04</span>
+        <span class="nav-card-title">Alchemy Body Werks</span>
+        <span class="nav-card-desc">The e-commerce operation I built and run independently</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nadine Herrera · All Rights Reserved</p>
+    <p>Atlanta, GA &nbsp;·&nbsp; Open to remote cybersecurity roles</p>
+  </footer>
 
 </body>
 </html>
