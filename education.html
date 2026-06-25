@@ -3,344 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Education & Certifications</title>
-
+<title>Education & Certifications | Nadine Herrera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-
-    margin: 0;
-    padding: 20px;
-
-    min-height: 100vh;
-}
-
-/* Main Container */
-
-.container {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 35px;
-
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border-radius: 12px;
-}
-
-/* Headings */
-
-h1 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-/* Intro */
-
-.subtitle {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 40px auto;
-    line-height: 1.8;
-    opacity: 0.95;
-}
-
-/* Sections */
-
-.section {
-    margin-bottom: 50px;
-}
-
-.section ul {
-    line-height: 1.9;
-}
-
-/* Skills Box */
-
-.skills-box {
-    background: rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 50px;
-}
-
-.skills-box h2 {
-    margin-top: 0;
-}
-
-/* Lists */
-
-ul {
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Certificate Images */
-
-.education img {
-    display: block;
-
-    width: 100%;
-    max-width: 700px;
-
-    margin: 25px auto;
-
-    border-radius: 14px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.25);
-}
-
-/* Back Button */
-
-.back-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-
-.back-button {
-    display: inline-block;
-
-    background-color: #ffffff;
-    color: #000000;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    padding: 12px 20px;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    transition: all .3s ease;
-}
-
-.back-button:hover {
-    background-color: #f2f2f2;
-}
-
-/* Footer */
-
-.footer-container {
-    text-align: center;
-    margin-top: 60px;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    body {
-        padding: 15px;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    .subtitle {
-        text-align: center;
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    .back-button {
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-    }
-
-    .education img {
-        width: 100%;
-    }
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f2ee;--surface:#fff;--ink:#0f1520;--ink-mid:#374151;--muted:#6b7280;--gold:#a07828;--rule:#ddd9d0}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(244,242,238,.95);padding:18px 40px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;z-index:100}
+.nav-name{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:12px;text-transform:uppercase}
+.hero{padding:160px 24px 80px;text-align:center;max-width:900px;margin:auto}
+.hero h1{font-size:clamp(3rem,7vw,5rem);margin:20px 0}
+.hero-eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.hero-subtitle{max-width:650px;margin:auto;color:var(--ink-mid)}
+.section{max-width:1000px;margin:auto;padding:0 24px 80px}
+.label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:30px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:24px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.gallery img{width:100%;border-radius:10px;border:1px solid var(--rule)}
+.btn{text-decoration:none;background:var(--gold);color:#fff;padding:12px 24px;border-radius:4px}
+.center{text-align:center}
+footer{border-top:1px solid var(--rule);padding:30px;display:flex;justify-content:space-between;flex-wrap:wrap}
 </style>
 </head>
-
 <body>
+<nav>
+<span class="nav-name">Nadine Herrera</span>
+<ul class="nav-links">
+<li><a href="#">Projects</a></li>
+<li><a href="#">Education</a></li>
+<li><a href="#">Resume</a></li>
+</ul>
+</nav>
 
-<div class="container">
+<section class="hero">
+<p class="hero-eyebrow">Education</p>
+<h1>Education & Certifications</h1>
+<p class="hero-subtitle">Formal education, industry certifications, and continuous learning supporting my transition into cybersecurity, IT operations, systems administration, and security-focused roles.</p>
+</section>
 
-    <h1>Education & Certifications</h1>
-
-    <div class="subtitle">
-        Formal education, industry certifications, and hands-on learning
-        supporting my transition into cybersecurity, IT operations,
-        systems administration, SOC analysis, and GRC-focused roles.
-    </div>
-
-    <!-- TECHNICAL SKILLS -->
-
-    <div class="skills-box">
-
-        <h2>Technical Skills & Learning Areas</h2>
-
-        <ul>
-            <li>IT Support & Technical Troubleshooting</li>
-            <li>Systems Administration Fundamentals</li>
-            <li>Security Operations Center (SOC) Concepts</li>
-            <li>Governance, Risk & Compliance (GRC)</li>
-            <li>Cloud Security Fundamentals</li>
-            <li>Risk Assessment & Analysis</li>
-            <li>Incident Response Concepts</li>
-            <li>User Support & Technical Communication</li>
-            <li>AI Productivity & Automation Tools</li>
-        </ul>
-
-    </div>
-
-    <!-- EDUCATION -->
-
-    <div class="section">
-
-        <h2>Formal Education</h2>
-
-        <ul>
-            <li>Master of Business Administration (MBA), Product Management</li>
-            <li>Bachelor of Science, Marketing with a specialization in Digital Marketing</li>
-            <li>Associate of Arts, General Studies</li>
-        </ul>
-
-    </div>
-
-    <!-- CERTIFICATIONS -->
-
-    <div class="section">
-
-        <h2>Certifications</h2>
-
-        <ul>
-            <li>Google Cybersecurity Professional Certificate</li>
-            <li>Google AI Essentials Certificate</li>
-            <li>CompTIA A+ Certified Professional IT Technician Certificate</li>
-            <li>CompTIA Security+ (Currently Pursuing)</li>
-        </ul>
-
-    </div>
-
-    <!-- CYBERSECURITY -->
-
-    <div class="section">
-
-        <h2>Cybersecurity Focus Areas</h2>
-
-        <ul>
-            <li>SOC (Security Operations Center) Fundamentals</li>
-            <li>Governance, Risk & Compliance (GRC)</li>
-            <li>Cloud Security Awareness</li>
-            <li>System Behavior & Risk Analysis</li>
-            <li>Security Mindset Development Through Real-World Exposure</li>
-        </ul>
-
-    </div>
-
-    <!-- APPLIED EXPERIENCE -->
-
-    <div class="section">
-
-        <h2>Applied Systems Experience</h2>
-
-        <ul>
-            <li>Apple Technical Investigations Advisor — troubleshooting complex technical issues and communicating solutions clearly</li>
-            <li>E-commerce Business Operations — customer behavior analysis, systems thinking, and digital workflow management</li>
-            <li>Real-world exposure to system behavior, operational constraints, and pattern recognition</li>
-        </ul>
-
-    </div>
-
-    <!-- CERTIFICATES & DEGREES -->
-
-    <div class="section education">
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_11.04.02_PM.png?v=1782356658"
-            alt="Master's Degree"
-        >
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008"
-            alt="Bachelor's Degree"
-        >
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125"
-            alt="Associate's Degree"
-        >
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Digital_Marketing.png?v=1741746851"
-            alt="Digital Marketing Certificate"
-        >
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129"
-            alt="CompTIA A+ Certificate"
-        >
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_10.52.34_PM.png?v=1782356180"
-            alt="Google AI Essentials Certificate"
-        >
-
-        <img
-            src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_10.53.45_PM.png?v=1782356180"
-            alt="Google Cybersecurity Professional Certificate"
-        >
-
-    </div>
-
+<section class="section">
+<div class="label">Technical Skills & Learning Areas</div>
+<div class="grid">
+<div class="card"><h3>IT Support</h3></div>
+<div class="card"><h3>Systems Administration</h3></div>
+<div class="card"><h3>Cybersecurity Fundamentals</h3></div>
+<div class="card"><h3>SOC Concepts</h3></div>
+<div class="card"><h3>GRC</h3></div>
+<div class="card"><h3>Cloud Security</h3></div>
 </div>
+</section>
 
-<!-- BACK BUTTON -->
-
-<div class="back-button-container">
-    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-        ← Back to Portfolio
-    </a>
+<section class="section">
+<div class="label">Formal Education</div>
+<div class="grid">
+<div class="card"><h3>MBA</h3><p>Product Management</p></div>
+<div class="card"><h3>Bachelor of Science</h3><p>Marketing with Digital Marketing Specialization</p></div>
+<div class="card"><h3>Associate of Arts</h3><p>General Studies</p></div>
 </div>
+</section>
 
-<!-- FOOTER -->
-
-<div class="footer-container">
-    <footer>
-        <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
+<section class="section">
+<div class="label">Certifications</div>
+<div class="grid">
+<div class="card"><h3>Google Cybersecurity Professional Certificate</h3></div>
+<div class="card"><h3>CompTIA A+</h3></div>
+<div class="card"><h3>Google AI Essentials</h3></div>
+<div class="card"><h3>CompTIA Security+ (In Progress)</h3></div>
 </div>
+</section>
 
+<section class="section">
+<div class="label">Credentials Gallery</div>
+<div class="gallery">
+<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2026-06-24_at_11.04.02_PM.png?v=1782356658">
+<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008">
+<img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125">
+</div>
+</section>
+
+<section class="section center">
+<a class="btn" href="https://nadineherrera.github.io/my-portfolio/">Back to Portfolio</a>
+</section>
+
+<footer>
+<p>© 2026 Nadine Herrera</p>
+<p>Atlanta, GA · Open to Remote Cybersecurity Roles</p>
+</footer>
 </body>
 </html>
