@@ -32,61 +32,67 @@ body {
     margin: 0 auto;
 }
 
-/* Profile Photo */
+/* HERO */
+
+.hero-title {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
 
 .profile-photo {
     width: 160px;
     height: 160px;
     border-radius: 50%;
     border: 3px solid #ffffff;
-    box-shadow: 0 4px 10px rgba(255,255,255,0.3);
     object-fit: cover;
     display: block;
-    margin: 20px auto;
-}
+    margin: 0 auto 30px auto;
 
-/* Headings */
-
-.hero-title {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 2rem;
+    box-shadow: 0 6px 18px rgba(255,255,255,0.25);
 }
 
 .page-title {
-    margin-top: 10px;
+    font-size: 3rem;
+    line-height: 1.25;
     margin-bottom: 40px;
-    font-size: 2.5rem;
-    line-height: 1.3;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Content */
+/* CONTENT CARD */
 
 .content {
-    max-width: 800px;
-    width: 100%;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 30px;
+
+    padding: 35px;
 
     text-align: left;
-    line-height: 1.8;
+    line-height: 1.9;
 
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
+
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .content p {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
-/* Navigation */
+.section:last-child {
+    margin-bottom: 0;
+}
+
+/* NAVIGATION */
 
 nav {
     margin-top: 60px;
@@ -94,43 +100,44 @@ nav {
 
 .nav-menu {
     list-style: none;
+
     margin: 0;
     padding: 0;
 
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
 
     gap: 15px;
 }
 
 .nav-menu li a {
-    text-decoration: none;
     display: inline-block;
 
-    padding: 14px 24px;
+    text-decoration: none;
+
+    padding: 14px 22px;
+
+    background: rgba(16, 73, 133, 0.95);
 
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
 
-    background: rgba(16, 73, 133, 0.95);
-
     border-radius: 8px;
 
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
 
 .nav-menu li a:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,.20);
     transform: translateY(-2px);
 }
 
-/* Footer */
+/* FOOTER */
 
 footer {
-    margin-top: 60px;
+    margin-top: 70px;
     padding-bottom: 20px;
 }
 
@@ -138,7 +145,7 @@ footer p {
     font-size: 14px;
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
@@ -147,30 +154,52 @@ footer p {
     }
 
     .hero-title {
-        font-size: 1.75rem;
-    }
-
-    .page-title {
         font-size: 2rem;
+        margin-bottom: 20px;
     }
 
     .profile-photo {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 25px;
+    }
+
+    .page-title {
+        font-size: 2.3rem;
+        line-height: 1.3;
+        margin-bottom: 30px;
     }
 
     .content {
         max-width: 100%;
-        padding: 0 10px;
+
+        padding: 30px 25px;
+
+        border-radius: 16px;
+    }
+
+    .content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .section {
+        margin-bottom: 45px;
     }
 
     .nav-menu {
         flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
     .nav-menu li a {
-        width: 240px;
+        width: 280px;
         text-align: center;
+    }
+
+    footer {
+        margin-top: 50px;
     }
 }
 
@@ -183,7 +212,9 @@ footer p {
 
     <!-- HERO -->
 
-    <h1 class="hero-title">Hi, 👋🏽 I'm Nadine</h1>
+    <p class="hero-title">
+        Hi, 👋🏽 I'm Nadine
+    </p>
 
     <img
         src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747"
@@ -191,9 +222,10 @@ footer p {
         class="profile-photo"
     >
 
-    <h5 class="page-title">
-        Cybersecurity & Systems Analyst (SOC / GRC Focus)
-    </h5>
+    <h1 class="page-title">
+    Cybersecurity Analyst<br>
+    SOC • GRC • Cloud Security
+</h1>
 
     <!-- CONTENT -->
 
@@ -217,15 +249,14 @@ footer p {
 
             <p>
                 I support customers by troubleshooting technical issues and
-                translating complex system behavior into clear,
-                human-readable explanations. This has strengthened my ability
-                to communicate technical concepts and recognize system-level
-                patterns.
+                translating complex system behavior into clear, human-readable
+                explanations. This has strengthened my ability to communicate
+                technical concepts and recognize system-level patterns.
             </p>
         </div>
 
         <div class="section">
-            <p><strong>E-commerce Business Owner</strong></p>
+            <p><strong>E-Commerce Business Owner</strong></p>
 
             <p>
                 I manage operations, customer experience, and digital systems
@@ -239,18 +270,19 @@ footer p {
             <p><strong>Problem-Solving Approach (STARR-Inspired)</strong></p>
 
             <p>
-                I approach problems by assessing system behavior, identifying
-                contributing factors, taking structured action, and reflecting
-                on outcomes to improve future decisions. This approach is
-                applied across both Apple support and business operations.
+                I approach problems by assessing system behavior,
+                identifying contributing factors, taking structured action,
+                and reflecting on outcomes to improve future decisions.
+                This approach is applied across both Apple support and
+                business operations.
             </p>
         </div>
 
         <div class="section">
             <p>
-                This portfolio highlights my projects, certifications,
-                plant-based skincare brand, and progression into
-                cybersecurity and systems-focused roles.
+                This portfolio highlights my front-end development projects,
+                certifications, e-commerce business experience, and progression
+                into cybersecurity and systems-focused roles.
             </p>
         </div>
 
@@ -259,7 +291,9 @@ footer p {
     <!-- NAVIGATION -->
 
     <nav>
+
         <ul class="nav-menu">
+
             <li>
                 <a href="https://nadineherrera.github.io/my-portfolio/projects">
                     Front-End Development Projects
@@ -268,13 +302,13 @@ footer p {
 
             <li>
                 <a href="https://nadineherrera.github.io/my-portfolio/education">
-                    Education
+                    Education & Certifications
                 </a>
             </li>
 
             <li>
                 <a href="https://nadineherrera.github.io/my-portfolio/resume">
-                    Resume
+                    Resume & Experience
                 </a>
             </li>
 
@@ -283,7 +317,9 @@ footer p {
                     E-Commerce Business & Operations
                 </a>
             </li>
+
         </ul>
+
     </nav>
 
     <!-- FOOTER -->
