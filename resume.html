@@ -1,236 +1,441 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume & Experience</title>
+
+<title>Resume & Experience | Nadine Herrera</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-
-    margin: 0;
-    padding: 20px;
-
-    min-height: 100vh;
+:root{
+    --bg:#f4f2ee;
+    --surface:#ffffff;
+    --ink:#0f1520;
+    --ink-mid:#374151;
+    --muted:#6b7280;
+    --gold:#a07828;
+    --gold-light:#c9a84c;
+    --rule:#ddd9d0;
 }
 
-/* Main Content Card */
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-
-    padding: 35px;
-
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    border-radius: 12px;
-
-    text-align: center;
+body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.7;
 }
 
-/* Headings */
+/* NAVIGATION */
 
-h1 {
-    margin-bottom: 15px;
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+
+    background:rgba(244,242,238,.95);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--rule);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
 }
 
-.subtitle {
-    max-width: 750px;
-    margin: 0 auto 35px auto;
-
-    line-height: 1.8;
-    opacity: 0.95;
+.nav-name{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
 }
 
-/* Highlights Box */
-
-.highlights {
-    background: rgba(255,255,255,.08);
-
-    border-radius: 10px;
-
-    padding: 25px;
-
-    margin-top: 30px;
-    margin-bottom: 40px;
-
-    text-align: left;
+.nav-links{
+    display:flex;
+    gap:24px;
+    list-style:none;
 }
 
-.highlights h2 {
-    margin-top: 0;
-    text-align: center;
+.nav-links a{
+    text-decoration:none;
+    color:var(--muted);
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.08em;
+    text-transform:uppercase;
 }
 
-.highlights ul {
-    line-height: 1.9;
+.nav-links a:hover{
+    color:var(--ink);
 }
 
-/* Button Section */
+/* HERO */
 
-.button-container {
-    text-align: center;
-    margin-top: 20px;
+.hero{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+
+    padding:160px 24px 80px;
 }
 
-.download-button,
-.back-button {
+.hero-eyebrow{
+    color:var(--gold);
 
-    display: inline-block;
+    font-size:11px;
+    font-weight:700;
 
-    background: #ffffff;
-    color: #000000;
+    letter-spacing:.22em;
+    text-transform:uppercase;
 
-    font-size: 16px;
-    font-weight: bold;
-
-    padding: 14px 24px;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    transition: all .3s ease;
+    margin-bottom:20px;
 }
 
-.download-button:hover,
-.back-button:hover {
-    background: #f2f2f2;
+.hero h1{
+    font-size:clamp(3rem,7vw,5rem);
+    font-weight:800;
+    margin-bottom:24px;
 }
 
-.back-button-container {
-    text-align: center;
-    margin-top: 30px;
+.hero-subtitle{
+    max-width:700px;
+    margin:auto;
+
+    color:var(--ink-mid);
 }
 
-/* Footer */
+/* TAGS */
 
-.footer-container {
-    text-align: center;
-    margin-top: 60px;
+.tags{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+    margin-top:35px;
 }
 
-footer p {
-    font-size: 14px;
+.tag{
+    background:white;
+
+    border:1px solid var(--rule);
+
+    border-radius:999px;
+
+    padding:10px 16px;
+
+    font-size:13px;
+    font-weight:600;
 }
 
-/* Mobile */
+/* SECTION */
 
-@media (max-width: 768px) {
+.section{
+    max-width:1100px;
+    margin:auto;
 
-    body {
-        padding: 15px;
+    padding:0 24px 80px;
+}
+
+.section-label{
+    color:var(--gold);
+
+    font-size:10px;
+    font-weight:700;
+
+    letter-spacing:.22em;
+    text-transform:uppercase;
+
+    margin-bottom:30px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid var(--rule);
+}
+
+/* CARDS */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:white;
+
+    border:1px solid var(--rule);
+
+    border-radius:14px;
+
+    padding:28px;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+/* RESUME SECTION */
+
+.resume-card{
+    background:white;
+
+    border:1px solid var(--rule);
+
+    border-radius:14px;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+.resume-card h2{
+    margin-bottom:15px;
+}
+
+.resume-card p{
+    max-width:600px;
+    margin:auto auto 30px;
+    color:var(--ink-mid);
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-block;
+
+    background:var(--gold);
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:4px;
+
+    font-size:12px;
+    font-weight:700;
+
+    text-transform:uppercase;
+    letter-spacing:.08em;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--gold-light);
+}
+
+.button-group{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid var(--rule);
+
+    padding:30px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+footer p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        padding:16px 20px;
     }
 
-    .container {
-        padding: 20px;
+    .nav-links{
+        gap:12px;
     }
 
-    h1 {
-        font-size: 2rem;
+    footer{
+        flex-direction:column;
+        gap:10px;
     }
 
-    .download-button,
-    .back-button {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .highlights {
-        padding: 20px;
+    .resume-card{
+        padding:25px;
     }
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<nav>
 
-    <h1>Professional Resume</h1>
+<span class="nav-name">Nadine Herrera</span>
 
-    <p class="subtitle">
-        My professional experience spans technical investigations,
-        customer support, systems troubleshooting, and e-commerce operations.
-        I am currently transitioning into cybersecurity with a focus on
-        Security Operations Center (SOC), Governance Risk & Compliance (GRC),
-        cloud security, and systems-focused roles.
-    </p>
+<ul class="nav-links">
+<li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
+<li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
+<li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
+<li><a href="https://alchemybodywerks.com/" target="_blank">Alchemy</a></li>
+</ul>
 
-    <div class="highlights">
+</nav>
 
-        <h2>Professional Highlights</h2>
+<section class="hero">
 
-        <ul>
-        <li>Technical Investigations Advisor specializing in complex issue analysis, troubleshooting, and root-cause investigation</li>
+<p class="hero-eyebrow">
+Professional Experience
+</p>
 
-        <li>Experience analyzing system behavior, identifying patterns, and resolving customer-impacting technical incidents</li>
+<h1>
+Resume & Experience
+</h1>
 
-        <li>Founder and operator of an e-commerce business managing digital systems, transactions, and operational risk</li>
+<p class="hero-subtitle">
+15+ years of experience spanning technical investigations,
+customer support, systems troubleshooting, business operations,
+and entrepreneurship. Currently focused on transitioning into
+cybersecurity, IT operations, systems administration,
+SOC analysis, and GRC-focused roles.
+</p>
 
-        <li>Google Cybersecurity Professional Certificate</li>
+<div class="tags">
 
-        <li>CompTIA A+ Certified Professional IT Technician</li>
-
-        <li>Currently pursuing CompTIA Security+</li>
-
-        <li>Knowledge of SOC operations, GRC principles, cloud security fundamentals, and risk assessment concepts</li>
-
-        <li>Strong technical communication skills with experience translating complex findings for diverse audiences</li>    
-        </ul>
-
-    </div>
-
-    <div class="button-container">
-
-        <a
-            href="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume.pdf?v=1782357165"
-            class="download-button"
-            target="_blank">
-
-            Download Full Resume
-
-        </a>
-
-    </div>
+<span class="tag">Technical Investigations</span> <span class="tag">IT Operations</span> <span class="tag">Systems Administration</span> <span class="tag">Cybersecurity</span> <span class="tag">SOC Concepts</span> <span class="tag">GRC</span> <span class="tag">Cloud Security</span>
 
 </div>
 
-<div class="back-button-container">
+</section>
 
-    <a
-        href="https://nadineherrera.github.io/my-portfolio/"
-        class="back-button">
+<section class="section">
 
-        ← Back to Portfolio
+<p class="section-label">
+Professional Highlights
+</p>
 
-    </a>
+<div class="card-grid">
+
+<div class="card">
+<h3>Technical Investigations</h3>
+<p>
+Specialized in complex troubleshooting,
+root-cause analysis, issue resolution,
+and customer-impacting technical investigations.
+</p>
+</div>
+
+<div class="card">
+<h3>IT Operations</h3>
+<p>
+Experience analyzing system behavior,
+supporting technology platforms,
+and solving operational challenges.
+</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity</h3>
+<p>
+Google Cybersecurity Professional Certificate,
+CompTIA A+ Certified,
+currently pursuing CompTIA Security+.
+</p>
+</div>
+
+<div class="card">
+<h3>Entrepreneurship</h3>
+<p>
+Founder and operator of an e-commerce business
+managing digital systems,
+transactions, customer experiences,
+and operational workflows.
+</p>
+</div>
 
 </div>
 
-<div class="footer-container">
+</section>
 
-    <footer>
-        <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
-    </footer>
+<section class="section">
+
+<p class="section-label">
+Resume Download
+</p>
+
+<div class="resume-card">
+
+<h2>Download My Resume</h2>
+
+<p>
+View my complete professional experience,
+technical skills, certifications,
+education, and career accomplishments.
+</p>
+
+<a
+href="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume.pdf?v=1782357165"
+target="_blank"
+class="btn">
+
+Download PDF Resume
+
+</a>
+
+<div class="button-group">
+
+<a
+href="https://nadineherrera.github.io/my-portfolio/"
+class="btn">
+
+Back to Portfolio
+
+</a>
 
 </div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Nadine Herrera · All Rights Reserved
+</p>
+
+<p>
+Atlanta, GA · Open to Remote Cybersecurity Roles
+</p>
+
+</footer>
 
 </body>
 </html>
