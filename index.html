@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-            background-size: cover;
-            background-position: center; 
-            background-repeat: no-repeat;
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center; 
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+body {
+    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center; 
+}
 
 .nav-container {
     width: 100vw;  
@@ -52,91 +53,113 @@
     background-color: rgba(255, 255, 255, 0.2); 
 }
 
-
-@media (max-width: 768px) {
-    .nav-menu {
-        flex-wrap: wrap; 
-        gap: 10px;
-    }
-
-    .nav-menu li a {
-        padding: 10px 15px; 
-    }
+.profile-photo {
+    width: 160px; 
+    height: 160px; 
+    border-radius: 50%; 
+    border: 3px solid #ffffff; 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; 
 }
 
+h1 {
+    font-size: 28px;
+    margin-top: 10px;
+}
 
-        .profile-photo {
-            width: 160px; 
-            height: 160px; 
-            border-radius: 50%; 
-            border: 3px solid #ffffff; 
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-            object-fit: cover;
-            display: block;
-            margin: 20px auto; 
-        }
+.content {
+    max-width: 700px;
+    margin: 0 auto; 
+    text-align: left; 
+    line-height: 1.6;
+}
 
-        h1 {
-            font-size: 28px;
-            margin-top: 10px;
-            text-align: center;
-        }
+.section {
+    margin-bottom: 25px;
+}
 
-        .content {
-            max-width: 600px;
-            margin: 0 auto; 
-            text-align: left; 
-        }
-
-        p {
-            text-align: left; 
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .footer-container {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        footer p {
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
+footer p {
+    text-align: center;
+    font-size: 14px;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Hi, 👋🏽 I'm Nadine!</h1>
-    <img 
-        src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
-        alt="Profile Picture" 
-        class="profile-photo"
-    />
+<!-- HERO -->
+<h1>Hi, 👋🏽 I'm Nadine</h1>
 
-    <h1>Welcome to my portfolio.</h1>
-    <div class="content">
-        <p>I am currently building toward a career in cybersecurity, with a focus on SOC analysis, GRC, and cloud security. My background combines customer-facing technical support at Apple with real-world experience managing an e-commerce business and digital systems.
- <p>At Apple, I support customers in troubleshooting technical issues and translating complex system behavior into clear, understandable explanations. This has strengthened my ability to communicate technical concepts and understand user-impacting system behavior.</p>
- <p>In addition to my role at Apple, I manage an e-commerce brand where I oversee operations, customer experience, and digital presence. This has given me practical exposure to system behavior, operational risk, and pattern recognition in real-world environments.</p>
- <p>This portfolio highlights my projects, learning, and career progression into cybersecurity and systems-focused roles.</p>
-        
-    </div>
+<img 
+    src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Profile_Picture.png?v=1741662747" 
+    alt="Profile Picture" 
+    class="profile-photo"
+/>
 
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
-            <li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
-            <li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
-            <li><a href="https://alchemybodywerks.com/">Alchemy Body Werks</a></li>
-        </ul>
-    </nav>
+<h1>Cybersecurity & Systems Analyst (SOC / GRC Focus)</h1>
 
-    <div class="footer-container">
-        <footer>
-            <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
-        </footer>
-    </div>
+<div class="content">
+
+<!-- CAREER SUMMARY -->
+<div class="section">
+<p>
+I am a technology professional transitioning into cybersecurity, with a focus on SOC analysis, GRC, and cloud security.
+</p>
+
+<p>
+My experience combines Apple customer support, e-commerce operations, and systems thinking to understand how digital environments behave and where risk can emerge.
+</p>
+</div>
+
+<!-- APPLE EXPERIENCE -->
+<div class="section">
+<p><strong>Apple – Customer Support</strong></p>
+<p>
+I support customers by troubleshooting technical issues and translating complex system behavior into clear, human-readable explanations. This has strengthened my ability to communicate technical concepts and recognize system-level patterns.
+</p>
+</div>
+
+<!-- BUSINESS EXPERIENCE -->
+<div class="section">
+<p><strong>E-commerce Business Owner</strong></p>
+<p>
+I manage operations, customer experience, and digital systems for my brand. This includes monitoring transactions, identifying irregular behavior patterns, and understanding operational risk in real-world environments.
+</p>
+</div>
+
+<!-- STARR-STYLE THINKING -->
+<div class="section">
+<p><strong>Problem-Solving Approach (STARR-Inspired)</strong></p>
+<p>
+I approach problems by assessing system behavior, identifying contributing factors, taking structured action, and reflecting on outcomes to improve future decisions. This approach is applied across both Apple support and business operations.
+</p>
+</div>
+
+<!-- CLOSING -->
+<div class="section">
+<p>
+This portfolio highlights my projects, certifications, and progression into cybersecurity and systems-focused roles.
+</p>
+</div>
+
+</div>
+
+<!-- NAV -->
+<nav>
+<ul class="nav-menu">
+    <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
+    <li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
+    <li><a href="https://nadineherrera.github.io/my-portfolio/resume">Resume</a></li>
+    <li><a href="https://alchemybodywerks.com/">Alchemy Body Werks</a></li>
+</ul>
+</nav>
+
+<!-- FOOTER -->
+<footer>
+<p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
