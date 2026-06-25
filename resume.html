@@ -1,156 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👩🏻‍💻 Professional Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume & Experience</title>
 
-    <style>
-        body {
-            background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center; 
-        }
+<style>
 
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+body {
+    background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-        .subtitle {
-            text-align: center;
-            opacity: 0.9;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
 
-        .resume-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
+    margin: 0;
+    padding: 20px;
 
-        .resume img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 14px;
-        }
+    min-height: 100vh;
+}
 
-        .download-button {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #ffffff;
-            color: #000000;
-            font-size: 16px;
-            padding: 12px 18px;
-            text-decoration: none;
-            border-radius: 8px;
-            border: 2px solid #ffffff;
-            transition: 0.3s ease;
-        }
+/* Main Content Card */
 
-        .download-button:hover {
-            background-color: #f2f2f2;
-        }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
 
-        .back-button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
+    padding: 35px;
 
-        .back-button {
-            background-color: #ffffff;
-            color: #000000;
-            font-size: 16px;
-            padding: 12px 18px;
-            text-decoration: none;
-            border-radius: 8px;
-            border: 2px solid #ffffff;
-            transition: 0.3s ease;
-        }
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 
-        .back-button:hover {
-            background-color: #f2f2f2;
-        }
+    border-radius: 12px;
 
-        .footer-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-            text-align: center;
-        }
+    text-align: center;
+}
 
-        footer p {
-            text-align: center;
-            margin: 0;
-        }
+/* Headings */
 
-        @media (max-width: 768px) {
-            .container {
-                max-width: 95%;
-                padding: 10px;
-            }
+h1 {
+    margin-bottom: 15px;
+}
 
-            h1 {
-                text-align: center;
-            }
+.subtitle {
+    max-width: 750px;
+    margin: 0 auto 35px auto;
 
-            .subtitle {
-                text-align: center;
-            }
-        }
-    </style>
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* Highlights Box */
+
+.highlights {
+    background: rgba(255,255,255,.08);
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    text-align: left;
+}
+
+.highlights h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.highlights ul {
+    line-height: 1.9;
+}
+
+/* Button Section */
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-button,
+.back-button {
+
+    display: inline-block;
+
+    background: #ffffff;
+    color: #000000;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 14px 24px;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: all .3s ease;
+}
+
+.download-button:hover,
+.back-button:hover {
+    background: #f2f2f2;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Footer */
+
+.footer-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .download-button,
+    .back-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .highlights {
+        padding: 20px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <header>
-            <h1>👩🏻‍💻 Professional Resume</h1>
+<div class="container">
 
-            <p class="subtitle">
-                My professional experience spans Apple customer support, e-commerce operations, and systems-based problem solving. 
-                I am currently transitioning into cybersecurity with a focus on SOC, GRC, and cloud security roles.
-            </p>
-        </header>
+    <h1>👩🏽‍💻 Professional Resume</h1>
+
+    <p class="subtitle">
+        My professional experience spans technical investigations,
+        customer support, systems troubleshooting, and e-commerce operations.
+        I am currently transitioning into cybersecurity with a focus on
+        Security Operations Center (SOC), Governance Risk & Compliance (GRC),
+        cloud security, and systems-focused roles.
+    </p>
+
+    <div class="highlights">
+
+        <h2>📌 Professional Highlights</h2>
+
+        <ul>
+            <li>15+ years of customer support and technical problem-solving experience</li>
+            <li>Technical Investigations Advisor supporting complex Apple customer issues</li>
+            <li>Founder and operator of a successful e-commerce business</li>
+            <li>Google Cybersecurity Professional Certificate</li>
+            <li>CompTIA A+ Certified Professional IT Technician</li>
+            <li>Currently pursuing CompTIA Security+</li>
+            <li>Experience with troubleshooting, systems analysis, and operational workflows</li>
+            <li>Strong communication skills with both technical and non-technical audiences</li>
+        </ul>
+
     </div>
 
-        <!-- DOWNLOAD BUTTON -->
-        <a href="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume.pdf?v=1782357165" 
-           class="download-button" 
-           target="_blank">
+    <div class="button-container">
+
+        <a
+            href="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Resume.pdf?v=1782357165"
+            class="download-button"
+            target="_blank">
+
             📄 Download Full Resume
+
         </a>
+
     </div>
 
-    <!-- BACK BUTTON -->
-    <div class="back-button-container">
-        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-            🔙 Back to Portfolio
-        </a>
-    </div>
+</div>
 
-    <!-- FOOTER -->
-    <div class="footer-container">
-        <footer>
-            <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
-        </footer>
-    </div>
+<div class="back-button-container">
+
+    <a
+        href="https://nadineherrera.github.io/my-portfolio/"
+        class="back-button">
+
+        🔙 Back to Portfolio
+
+    </a>
+
+</div>
+
+<div class="footer-container">
+
+    <footer>
+        <p>&copy; 2026 Nadine Herrera. All Rights Reserved.</p>
+    </footer>
+
+</div>
 
 </body>
 </html>
