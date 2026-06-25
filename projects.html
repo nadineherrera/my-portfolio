@@ -124,9 +124,38 @@ flex-wrap:wrap;
 }
 footer p{font-size:11px;color:var(--muted)}
 @media(max-width:768px){
-nav{padding:16px 20px}
-.nav-links{gap:14px}
-footer{flex-direction:column}
+
+  nav{
+    padding:16px 20px;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .nav-name{
+    text-align:center;
+  }
+
+  .nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .nav-links a{
+    font-size:11px;
+  }
+
+  .hero{
+    padding-top:180px;
+  }
+
+  footer{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:8px;
+  }
 }
 </style>
 </head>
