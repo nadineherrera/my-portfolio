@@ -28,8 +28,23 @@ nav{position:fixed;top:0;left:0;right:0;background:rgba(244,242,238,.95);padding
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .gallery img{width:100%;border-radius:10px;border:1px solid var(--rule)}
 .btn{text-decoration:none;background:var(--gold);color:#fff;padding:12px 24px;border-radius:4px}
-.center{text-align:center}
-footer{border-top:1px solid var(--rule);padding:30px;display:flex;justify-content:space-between;flex-wrap:wrap}
+.center{text-align:center}footer{
+    border-top:1px solid var(--rule);
+
+    padding:30px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+
+    margin-top:80px;
+}
+
+footer p{
+    color:var(--muted);
+    font-size:11px;
+}
 </style>
 </head>
 <body>
@@ -97,8 +112,9 @@ footer{border-top:1px solid var(--rule);padding:30px;display:flex;justify-conten
 </section>
 
 <footer>
-<p>© 2026 Nadine Herrera</p>
-<p>Atlanta, GA · Open to Remote Cybersecurity Roles</p>
+<footer>
+    <p>© 2026 Nadine Herrera · All Rights Reserved</p>
+    <p>Atlanta, GA · Open to Remote Cybersecurity Roles</p>
 </footer>
 </body>
 </html>
