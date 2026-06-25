@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎓 My Education & Certifications</title>
+    <title>🎓 Education & Certifications</title>
+
     <style>
         body {
             background-image: url('https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Screenshot_2025-03-14_at_11.15.27_PM.png?v=1742008577'); 
@@ -18,30 +19,35 @@
 
         .container {
             width: 90%;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
-            text-align: left;
         }
 
         h1 {
             text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        h2 {
-            text-align: left;
             margin-bottom: 10px;
         }
 
-        p {
+        .subtitle {
             text-align: center;
-            max-width: 100%;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        h2 {
+            margin-top: 30px;
             margin-bottom: 10px;
         }
-        
-        .education-section {
-            margin-bottom: 40px;
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            line-height: 1.6;
+            padding-left: 20px;
         }
 
         .education img {
@@ -52,14 +58,13 @@
             margin-bottom: 20px;
         }
 
-    
         .back-button-container {
             display: flex;
             justify-content: center;
-            margin-top: 0; /* Adds space between last education section and button */
+            margin-top: 40px;
         }
 
-  .back-button {
+        .back-button {
             display: inline-block;
             background-color: #ffffff;
             color: #000000;
@@ -68,96 +73,105 @@
             text-decoration: none;
             border-radius: 8px;
             border: 2px solid #ffffff;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            margin-top: 0; /* Decrease space like resume page */
-}
+            transition: 0.3s ease;
+        }
 
         .back-button:hover {
-            background-color: #f7f7f7;
-            color: #000000;
+            background-color: #f2f2f2;
         }
 
         .footer-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
             text-align: center;
+            margin-top: 40px;
         }
 
-        footer p {
-            text-align: center;
-            margin: 0;
-        }
-   
         @media (max-width: 768px) {
             .container {
                 max-width: 95%;
                 padding: 10px;
             }
 
-            h1 {
+            h1, h2 {
                 text-align: center;
-            }
-
-            h2, p {
-                text-align: left;
-            }
-
-            .education img {
-                max-width: 100%;
-            }
-
-            .back-button-container {
-                justify-content: center;
-            }
-
-            .footer-container {
-                justify-content: center;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <header>
-            <h1>🎓 My Education & Certifications</h1>
-            <p>Showcasing my academic achievements and certifications.</p>
-        </header>
+<div class="container">
+
+    <h1>🎓 Education & Certifications</h1>
+
+    <div class="subtitle">
+        Formal education, professional certifications, and cybersecurity-focused learning supporting my transition into SOC, GRC, and cloud security roles.
     </div>
 
-  
-    <div class="container education-section">
-        <div class="education">
-            <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008" alt="Bachelor's Degree">
-        </div>
-
-        <div class="education">
-            <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125" alt="Associate's Degree">
-        </div>
-
-        <div class="education">
-            <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Digital_Marketing.png?v=1741746851" alt="Digital Marketing Certification">
-        </div>
-
-        <div class="education">
-            <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129" alt="CompTIA A+ Certification">
-        </div>
+    <!-- EDUCATION -->
+    <div class="section">
+        <h2>🎓 Formal Education</h2>
+        <ul>
+            <li>Bachelor’s Degree — Foundation in structured thinking, communication, and problem-solving</li>
+            <li>Associate’s Degree — Core academic and analytical development</li>
+        </ul>
     </div>
 
- 
-    <div class="back-button-container">
-        <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
-            🔙 Back to Portfolio
-        </a>
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+        <h2>📜 Certifications</h2>
+        <ul>
+            <li>CompTIA A+ Certification</li>
+            <li>Digital Marketing Certification</li>
+            <li>Security+ (In Progress)</li>
+        </ul>
     </div>
 
-    <div class="footer-container">
-        <footer>
-            <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
-        </footer>
+    <!-- CYBERSECURITY FOCUS -->
+    <div class="section">
+        <h2>🧠 Cybersecurity Focus Areas</h2>
+        <ul>
+            <li>SOC (Security Operations Center) fundamentals</li>
+            <li>GRC (Governance, Risk, and Compliance) principles</li>
+            <li>Cloud security awareness</li>
+            <li>System behavior & risk analysis</li>
+            <li>Security mindset development through real-world exposure</li>
+        </ul>
     </div>
+
+    <!-- APPLIED EXPERIENCE -->
+    <div class="section">
+        <h2>🧩 Applied Systems Experience</h2>
+        <ul>
+            <li>Apple customer support — translating technical issues into clear user communication</li>
+            <li>E-commerce business operations — customer behavior, systems thinking, and digital workflows</li>
+            <li>Real-world exposure to system behavior, operational constraints, and pattern recognition</li>
+        </ul>
+    </div>
+
+    <!-- IMAGES -->
+    <div class="section education">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Bachelor_s_Degree.png?v=1741741008" alt="Bachelor's Degree">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Associates_Degree.png?v=1741743125" alt="Associate's Degree">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/Digital_Marketing.png?v=1741746851" alt="Digital Marketing Certification">
+        <img src="https://cdn.shopify.com/s/files/1/0674/0898/6349/files/CompTIA_A_Cert.png?v=1741742129" alt="CompTIA A+ Certification">
+    </div>
+
+</div>
+
+<!-- BACK BUTTON -->
+<div class="back-button-container">
+    <a href="https://nadineherrera.github.io/my-portfolio/" class="back-button">
+        🔙 Back to Portfolio
+    </a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-container">
+    <footer>
+        <p>&copy; 2025 Nadine Herrera. All Rights Reserved.</p>
+    </footer>
+</div>
 
 </body>
 </html>
-
