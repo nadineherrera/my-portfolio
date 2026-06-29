@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +56,11 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gold);
+      text-decoration: none;
+    }
+
+    .nav-name:hover {
+      color: var(--gold-lt);
     }
 
     .nav-links {
@@ -499,80 +505,40 @@
     }
 
     /* ── MOBILE ── */
-  @media (max-width: 768px) {
-
-  nav{
-    padding:16px 20px;
-    flex-direction:column;
-    gap:12px;
-  }
-
-  .nav-name{
-    text-align:center;
-  }
-
-  .nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:12px;
-  }
-
-  .nav-links a{
-    font-size:11px;
-  }
-
-  .hero-narrative{
-    padding:26px 22px;
-  }
-
-  .experience-grid{
-    grid-template-columns:1fr;
-    gap:36px;
-  }
-
-  .exp-divider{
-    display:none;
-  }
-
-  .stories-grid{
-    grid-template-columns:1fr;
-  }
-
-  .story-card-wide{
-    grid-column:auto;
-  }
-
-  .starr-steps{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .starr-step:nth-child(2n){
-    border-right:none;
-  }
-
-  .starr-step{
-    border-bottom:1px solid var(--rule);
-  }
-
-  .starr-step:last-child{
-    border-bottom:none;
-  }
-
-  .starr-header{
-    padding:26px 22px 18px;
-  }
-
-  .how-i-work {
-    padding: 26px 22px;
-  }
-
-  footer{
-    padding:24px 20px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-name { text-align: center; }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+      .nav-links a { font-size: 11px; }
+      .hero-narrative { padding: 26px 22px; }
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .exp-divider { display: none; }
+      .stories-grid { grid-template-columns: 1fr; }
+      .story-card-wide { grid-column: auto; }
+      .starr-steps { grid-template-columns: 1fr 1fr; }
+      .starr-step:nth-child(2n) { border-right: none; }
+      .starr-step { border-bottom: 1px solid var(--rule); }
+      .starr-step:last-child { border-bottom: none; }
+      .starr-header { padding: 26px 22px 18px; }
+      .how-i-work { padding: 26px 22px; }
+      footer {
+        padding: 24px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
 
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; }
@@ -583,7 +549,7 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-name">Nadine Herrera</span>
+    <a href="https://nadineherrera.github.io/my-portfolio/" class="nav-name">Nadine Herrera</a>
     <ul class="nav-links">
       <li><a href="https://nadineherrera.github.io/my-portfolio/projects">Projects</a></li>
       <li><a href="https://nadineherrera.github.io/my-portfolio/education">Education</a></li>
@@ -679,10 +645,10 @@
         <h3>E-Commerce Operator &amp; Risk Owner</h3>
         <p>
           Running a live e-commerce business solo means being <strong>security-conscious by necessity</strong>
-          — knowing how to identify risk, understanding which areas need additional expertise, and enlisting the 
-          right tools and services to fill those gaps. When I noticed coordinated fraudulent activity — 
-          multiple accounts, different emails, same shipping addresses — I didn't just flag it. I got curious. 
-          I assessed what I was seeing, built controls within the platform, and monitored the behavior — while 
+          — knowing how to identify risk, understanding which areas need additional expertise, and enlisting the
+          right tools and services to fill those gaps. When I noticed coordinated fraudulent activity —
+          multiple accounts, different emails, same shipping addresses — I didn't just flag it. I got curious.
+          I assessed what I was seeing, built controls within the platform, and monitored the behavior — while
           recognizing where purpose-built security services could do what I couldn't do alone.
         </p>
         <p>
